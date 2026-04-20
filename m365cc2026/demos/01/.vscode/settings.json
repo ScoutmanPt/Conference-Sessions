@@ -1,0 +1,5 @@
+{
+    "workbench.iconTheme": "runbook-workbench-icons",
+    "explorer.decorations.colors": false,
+    "powershell.powerShellDefaultVersion": "PowerShell"
+}

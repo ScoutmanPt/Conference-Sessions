@@ -1,0 +1,103 @@
+[
+  {
+    "accountName": "aa-etension",
+    "resourceGroup": "rg_runbooks",
+    "subscriptionId": "b8f257f8-149a-497c-8150-1b2c6d4feb5f",
+    "subscriptionName": "MPN-ISBR",
+    "location": "northeurope",
+    "linkedAt": "2026-04-19T16:39:05.791Z",
+    "runbooks": {
+      "Get-GraphTenantSites": {
+        "runbookType": "PowerShell"
+      },
+      "Get-PnPSites": {
+        "runbookType": "PowerShell"
+      }
+    },
+    "sync": {}
+  },
+  {
+    "accountName": "aa-demo",
+    "resourceGroup": "rg_m365cc",
+    "subscriptionId": "b8f257f8-149a-497c-8150-1b2c6d4feb5f",
+    "subscriptionName": "MPN-ISBR",
+    "location": "northeurope",
+    "linkedAt": "2026-04-19T22:08:29.949Z",
+    "runbooks": {
+      "Get-Sites": {
+        "runbookType": "PowerShell",
+        "runtimeEnvironment": "PowerShell-76"
+      },
+      "Get-ExternalUsers": {
+        "runbookType": "PowerShell",
+        "runtimeEnvironment": "PowerShell-76"
+      },
+      "test-rb": {
+        "runbookType": "PowerShell",
+        "runtimeEnvironment": "PS7.6"
+      },
+      "Clone-Teams": {
+        "runbookType": "PowerShell",
+        "runtimeEnvironment": "PowerShell-76"
+      }
+    },
+    "sync": {
+      "Get-Sites": "72ed3482ba9966de7674b9d3485998e87d9bcb9b52f97444318b1d51c33d93d2",
+      "Get-ExternalUsers": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "test-rb": "bd074d038294e20c8909cae95f44b9b4cef990e488a0cacf28afd79cc2932786",
+      "Clone-Teams": "fbde13f31ce800d5931ac48e0c3ccabe74c6b7e57596f9a643799b77af0b34e2"
+    }
+  },
+  {
+    "accountName": "aa-m365cc",
+    "resourceGroup": "rg_m365cc",
+    "subscriptionId": "b8f257f8-149a-497c-8150-1b2c6d4feb5f",
+    "subscriptionName": "MPN-ISBR",
+    "location": "northeurope",
+    "linkedAt": "2026-04-20T02:21:58.350Z",
+    "runbooks": {
+      "test-a": {
+        "runbookType": "PowerShell",
+        "runtimeEnvironment": "PowerShell-7.2"
+      },
+      "DrOctopus": {
+        "runbookType": "PowerShell",
+        "runtimeEnvironment": "PowerShell-76"
+      },
+      "Collect-TeamsReport": {
+        "runbookType": "PowerShell",
+        "runtimeEnvironment": "PowerShell-76"
+      },
+      "Collect-SitesReport": {
+        "runbookType": "PowerShell",
+        "runtimeEnvironment": "PowerShell-76"
+      },
+      "Collect-AllReports": {
+        "runbookType": "PowerShell",
+        "runtimeEnvironment": "PowerShell-76"
+      },
+      "Clone-Team": {
+        "runbookType": "PowerShell",
+        "runtimeEnvironment": "PowerShell-76"
+      },
+      "Update-TeamsTemplates": {
+        "runbookType": "PowerShell",
+        "runtimeEnvironment": "PowerShell-76"
+      },
+      "Get-ExchangeRates": {
+        "runbookType": "PowerShell",
+        "runtimeEnvironment": "PowerShell-76"
+      }
+    },
+    "sync": {
+      "test-a": "cc4ee353fe9bfef8e50416f6886439eaf22174b14302446de001618f7c51938f",
+      "DrOctopus": "3b79b66c1706a3f2ee9514a5b4b6b366ec8bce14256a0dff808d67751f75ec21",
+      "Collect-TeamsReport": "789cc6f9188845b765069b468f1fc32eaeacdaecd63e56ef541409483debaaba",
+      "Collect-SitesReport": "299a52c75f2e530e1af636c520832997a31e8865521a8a8c0837ce748e045411",
+      "Collect-AllReports": "2308902c11a317cefc0d672fc2dfb58729761054a05cc1132338a9e0bcd5d0fe",
+      "Clone-Team": "7c235017f50818585b8abe2ad5d4694d659c52301be763f1bab15d8beaf6ff49",
+      "Update-TeamsTemplates": "284644922e27762d84c78b4da34620499b8258d4370e6647abd052e72ba28f77",
+      "Get-ExchangeRates": "0679195d40b9cb4e919d3116251b1365f949765ab7158e1e0ea554ef6677ebd9"
+    }
+  }
+]

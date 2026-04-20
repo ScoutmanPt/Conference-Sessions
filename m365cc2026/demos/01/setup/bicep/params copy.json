@@ -1,0 +1,36 @@
+﻿{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "location": {
+      "value": "northeurope"
+    },
+    "SharePointConnectionName": {
+      "value": "sharepoint-conn"
+    },
+    "AzureAutomationAccountName": {
+      "value": "aa-demo"
+    },
+    "LogicAppNameTeams": {
+      "value": "logicapp-teams"
+    },
+    "LogicAppNameSharePoint": {
+      "value": "logicapp-sharepoint"
+    },
+    "AzureAutomationConnID": {
+      "value": "/subscriptions/b8f257f8-149a-497c-8150-1b2c6d4feb5f/resourceGroups/rg_m365cc/providers/Microsoft.Web/connections/aa-demo-account"
+    },
+    "SharePointConnID": {
+      "value": "/subscriptions/b8f257f8-149a-497c-8150-1b2c6d4feb5f/resourceGroups/rg_m365cc/providers/Microsoft.Web/connections/sharepoint-conn-demo"
+    },
+    "SharePointSiteUrl": {
+      "value": "https://contoso.sharepoint.com/sites/demo"
+    },
+    "TeamsRequestListName": {
+      "value": "TeamsRequests"
+    },
+    "SharePointActionListName": {
+      "value": "ActionRequests"
+    }
+  }
+}

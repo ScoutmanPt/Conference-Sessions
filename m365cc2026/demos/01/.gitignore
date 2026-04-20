@@ -1,0 +1,7 @@
+local.settings.json
+.env
+.settings/cache/workspace-cache/
+.settings/tmp/
+.settings/cache/modules/
+!aaccounts/**/pipelines/modules/
+!aaccounts/**/pipelines/modules/*.zip
