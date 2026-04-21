@@ -70,88 +70,17 @@ function Send-Message($fileLink, $reportCenter, $TeamsWebHookUrl) {
   $CardButtonText = "Visit the Report Center"
   $ImageSize = "110px"
 
-  # Power Automate Workflows webhook format (replaces retired Office 365 Connectors)
-  $reportCard = '{ "type": "message", "attachments": [ { "contentType": "application/vnd.microsoft.card.adaptive", "content": { "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.5", "body": [ { "type": "ColumnSet", "columns": [ { "items": [ { "text": "' + $CardCaption + '", "size": "Large", "weight": "Bolder", "color": "Attention", "wrap": true, "type": "TextBlock" }, { "text": "' + $CardTitle + '", "size": "extraLarge", "weight": "bolder", "spacing": "none", "wrap": true, "type": "TextBlock" }, { "type": "TextBlock", "size": "small", "maxLines": 1, "text": "' + $CardSubTitle + '", "wrap": true }, { "type": "TextBlock", "size": "small", "text": "' + $CardText + ' [' + $CardText1Link + '](' + $CardText1LinkUrl + ')", "wrap": true } ], "type": "Column", "width": 2 }, { "items": [ { "type": "Image", "url": "' + $image + '", "altText": "1", "width": "' + $imageSize + '" } ], "type": "Column", "width": 1 } ] } ], "actions": [ { "type": "Action.OpenUrl", "url": "' + $CardButtonRedirect + '", "title": "' + $CardButtonText + '" } ] } } ] }' 
-  $reportCard='{ "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.5", "body": [ { "type": "ColumnSet", "columns": [ { "items": [ { "text": "' + $CardCaption + '", "size": "Large", "weight": "Bolder", "color": "Attention", "wrap": true, "type": "TextBlock" }, { "text": "' + $CardTitle + '", "size": "extraLarge", "weight": "bolder", "spacing": "none", "wrap": true, "type": "TextBlock" }, { "type": "TextBlock", "size": "small", "maxLines": 1, "text": "' + $CardSubTitle + '", "wrap": true }, { "type": "TextBlock", "size": "small", "text": "' + $CardText + ' [' + $CardText1Link + '](' + $CardText1LinkUrl + ')", "wrap": true } ], "type": "Column", "width": 2 }, { "items": [ { "type": "Image", "url": "' + $image + '", "altText": "1", "width": "' + $imageSize + '" } ], "type": "Column", "width": 1 } ] } ], "actions": [ { "type": "Action.OpenUrl", "url": "' + $CardButtonRedirect + '", "title": "' + $CardButtonText + '" } ] }'
-  <#
-  Good!
-  {
-    "type": "AdaptiveCard",
-    "$schema": "https://adaptivecards.io/schemas/adaptive-card.json",
-    "version": "1.5",
-    "body": [
-    {
-      "type": "ColumnSet",
-      "columns": [
-        {
-          "items": [
-            {
-              "text": "",
-              "size": "Large",
-              "weight": "Bolder",
-              "color": "Attention",
-              "wrap": true,
-              "type": "TextBlock"
-            },
-            {
-              "text": "Reports",
-              "size": "extraLarge",
-              "weight": "bolder",
-              "spacing": "none",
-              "wrap": true,
-              "type": "TextBlock"
-            },
-            {
-              "type": "TextBlock",
-              "size": "small",
-              "maxLines": 1,
-              "text": "A report was requested !",
-              "wrap": true
-            },
-            {
-              "type": "TextBlock",
-              "size": "small",
-              "text": "Check it out! [**Sites List Report**](https://rodrigopinto.sharepoint.com/sites/Excelsior/CReports/SharePoint/SharePointReport_20260420-035008.csv?d=wab39f2eb670c468cb286ff61d08820ac) []()",
-              "wrap": true
-            }
-          ],
-          "type": "Column",
-          "width": 2
-        },
-        {
-          "items": [
-            {
-              "type": "Image",
-              "url": "",
-              "altText": "1",
-              "width": "110px"
-            }
-          ],
-          "type": "Column",
-          "width": 1
-        }
-      ]
-    }
-  ],
-  "actions": [
-    {
-      "type": "Action.OpenUrl",
-      "url": "https://rodrigopinto.sharepoint.com/sites/Excelsior/CReports",
-      "title": "Visit the Report Center"
-    }
-  ]
-}
 
-  
-  #>
+ $reportCard='{ "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.5", "body": [ { "type": "ColumnSet", "columns": [ { "items": [ { "text": "' + $CardTitle + '", "size": "extraLarge", "weight": "bolder", "spacing": "none", "wrap": true, "type": "TextBlock" }, { "type": "TextBlock", "size": "small", "maxLines": 1, "text": "' + $CardSubTitle + '", "wrap": true }, { "type": "TextBlock", "size": "small", "text": "' + $CardText + '", "wrap": true } ], "type": "Column", "width": 2 } ] } ], "actions": [ { "type": "Action.OpenUrl", "url": "' + $CardButtonRedirect + '", "title": "' + $CardButtonText + '" } ] }'
   $JSON = ($reportCard | ConvertTo-JSON |  ConvertFrom-Json -Depth 10)
   $Params = @{
-    "URI"         = "https://prod-23.northeurope.logic.azure.com:443/workflows/a5040b5e9f5542cab73093e2a2eb98be/triggers/When_an_HTTP_request_is_received/paths/invoke?api-version=2016-10-01&sp=%2Ftriggers%2FWhen_an_HTTP_request_is_received%2Frun&sv=1.0&sig=aVNGZj8MV15a_YDtcAV0k_O--gclL5vXGMhT7Fa4z6I" #$TeamsWebHookUrl
+    "URI"         = $TeamsWebHookUrl
     "Method"      = 'POST'
     "Body"        = $JSON
     "ContentType" = 'application/json'
   }
-	Write-Output "Body= $JSON"	
+	#for debug purposes
+  #Write-Output "Body= $JSON"	
   Invoke-RestMethod @Params
 }
 if ($SendMsg -eq 1) {

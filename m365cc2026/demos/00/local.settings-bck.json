@@ -1,0 +1,15 @@
+{
+  "PnPAppId": "2b0dacad-2cdd-4b87-a045-2ba1e8e09dc4",
+  "aaccounts": [
+    {
+      "accountName": "aa-test",
+      "IsEncrypted": false,
+      "Assets": {
+        "Variables": {},
+        "Credentials": {},
+        "Connections": {},
+        "Certificates": {}
+      }
+    }
+  ]
+}

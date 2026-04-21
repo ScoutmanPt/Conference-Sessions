@@ -1,5 +1,4 @@
 ﻿param(
-    [string] $SiteUrl,
     [string] $CloneTeam,
     [string] $NewTeamName,
     [string] $NewMailNickname = 'fg@rodrigopinto.onmicrosoft.com',
@@ -8,14 +7,15 @@
 )
 
     $ErrorActionPreference = "Stop"
-    $Scope = "[Clone-Team]v1.1"
+    $Scope = "[Clone-Team]v1.2"
     Write-Output "$Scope Start"
-    
-    
- 
+    $siteAdminUrl =Get-AutomationVariable -Name 'SiteAdminUrl'
+    Write-Output " SiteUrl=$siteAdminUrl"
+    Write-Output " CloneTeam=$CloneTeam"
+    Write-Output " NewTeamName=$NewTeamName"
 
-    Write-Output "$Scope  Connect to tenant"
-    Connect-PnPOnline  -ManagedIdentity
+    Write-Output "$Scope Connect to tenant"
+    Connect-PnPOnline -Url $siteAdminUrl -ManagedIdentity
 
     Write-Output "$Scope  Get Token"
     $accesstoken = Get-PnPAccessToken
@@ -86,7 +86,8 @@
         $Image = "https://cdn.dribbble.com/users/136021/screenshots/4737243/clone-dribbble.gif"
         $ImageSize = "250px"
 
-        $reportCard = '{ "type": "message", "attachments": [ { "content": { "$schema": "<http://adaptivecards.io/schemas/adaptive-card.json>", "type": "AdaptiveCard", "version": "1.5", "body": [ { "type": "ColumnSet", "columns": [ { "items": [ { "text": "' + $CardCaption + '", "size": "Large", "weight": "Bolder", "color": "Attention", "wrap": true, "type": "TextBlock" }, { "text": "' + $CardTitle + '", "size": "extraLarge", "weight": "bolder", "spacing": "none", "wrap": true, "type": "TextBlock" }, { "type": "TextBlock", "size": "small", "maxLines": 1, "text": "' + $CardSubTitle + '", "wrap": true }, { "type": "TextBlock", "size": "small", "text": "' + $CardText + ' [' + $CardText1Link + '](' + $CardText1LinkUrl + ')", "wrap": true } ], "type": "Column", "width": 2 }, { "items": [ { "type": "Image", "url": "' + $image + '", "altText": "1", "width": "' + $imageSize + '" } ], "type": "Column", "width": 1 } ] } ], "actions": [ { "type": "Action.OpenUrl", "url": "' + $CardButtonRedirect + '", "title": "' + $CardButtonText + '" } ] }, "contentType": "application/vnd.microsoft.card.adaptive" } ] }' 
+        $reportCard = '{ "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.5", "body": [ { "type": "ColumnSet", "columns": [ { "items": [ { "text": "' + $CardCaption + '", "size": "Large", "weight": "Bolder", "color": "Attention", "wrap": true, "type": "TextBlock" }, { "text": "' + $CardTitle + '", "size": "extraLarge", "weight": "bolder", "spacing": "none", "wrap": true, "type": "TextBlock" }, { "type": "TextBlock", "size": "small", "maxLines": 1, "text": "' + $CardSubTitle + '", "wrap": true }, { "type": "TextBlock", "size": "small", "text": "' + $CardText + ' [' + $CardText1Link + '](' + $CardText1LinkUrl + ')", "wrap": true } ], "type": "Column", "width": 2 }, { "items": [ { "type": "Image", "url": "' + $image + '", "altText": "1", "width": "' + $imageSize + '" } ], "type": "Column", "width": 1 } ] } ], "actions": [ { "type": "Action.OpenUrl", "url": "' + $CardButtonRedirect + '", "title": "' + $CardButtonText + '" } ] }' 
+       
         $JSON = ($reportCard | ConvertTo-JSON |  ConvertFrom-Json -Depth 10)
         $Params = @{
             "URI"         = $TeamsWebHookUrl

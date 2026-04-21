@@ -6,7 +6,7 @@ param(
 )
 
 $ErrorActionPreference = "Stop"
-$Scope = "[Collect-TeamsReport]v1.1"
+$Scope = "[Collect-TeamsReport] v1.2"
 [int] $SendMsg = 1
 Write-Output "$Scope Start"
 Write-Output "$Scope  Get all Teams"
@@ -72,7 +72,7 @@ function Send-Message($fileLink, $reportCenter, $TeamsWebHookUrl) {
 	$Image = "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTVkMTYzZDdiOTgzMmU2ODIzN2U2NTZjNTI5YTVhNmVlZTRhNjZmOCZlcD12MV9pbnRlcm5hbF9naWZzX2dpZklkJmN0PXM/gVzoxZFmhO5yWShg8K/giphy.gif"
 	$ImageSize = "110px"
 
-	$reportCard = '{ "type": "message", "attachments": [ { "content": { "$schema": "<http://adaptivecards.io/schemas/adaptive-card.json>", "type": "AdaptiveCard", "version": "1.5", "body": [ { "type": "ColumnSet", "columns": [ { "items": [ { "text": "' + $CardCaption + '", "size": "Large", "weight": "Bolder", "color": "Attention", "wrap": true, "type": "TextBlock" }, { "text": "' + $CardTitle + '", "size": "extraLarge", "weight": "bolder", "spacing": "none", "wrap": true, "type": "TextBlock" }, { "type": "TextBlock", "size": "small", "maxLines": 1, "text": "' + $CardSubTitle + '", "wrap": true }, { "type": "TextBlock", "size": "small", "text": "' + $CardText + ' [' + $CardText1Link + '](' + $CardText1LinkUrl + ')", "wrap": true } ], "type": "Column", "width": 2 }, { "items": [ { "type": "Image", "url": "' + $image + '", "altText": "1", "width": "' + $imageSize + '" } ], "type": "Column", "width": 1 } ] } ], "actions": [ { "type": "Action.OpenUrl", "url": "' + $CardButtonRedirect + '", "title": "' + $CardButtonText + '" } ] }, "contentType": "application/vnd.microsoft.card.adaptive" } ] }' 
+ 	$reportCard='{ "$schema": "http://adaptivecards.io/schemas/adaptive-card.json", "type": "AdaptiveCard", "version": "1.5", "body": [ { "type": "ColumnSet", "columns": [ { "items": [ { "text": "' + $CardTitle + '", "size": "extraLarge", "weight": "bolder", "spacing": "none", "wrap": true, "type": "TextBlock" }, { "type": "TextBlock", "size": "small", "maxLines": 1, "text": "' + $CardSubTitle + '", "wrap": true }, { "type": "TextBlock", "size": "small", "text": "' + $CardText + '", "wrap": true } ], "type": "Column", "width": 2 } ] } ], "actions": [ { "type": "Action.OpenUrl", "url": "' + $CardButtonRedirect + '", "title": "' + $CardButtonText + '" } ] }'
 	$JSON = ($reportCard | ConvertTo-JSON |  ConvertFrom-Json -Depth 10)
 	$Params = @{
 		"URI"         = $TeamsWebHookUrl

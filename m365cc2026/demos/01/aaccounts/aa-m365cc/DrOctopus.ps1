@@ -5,9 +5,8 @@
     [string] $List ,
     [string] $ID
 )
-
 $ErrorActionPreference = "Stop"
-$Scope = "[DrOctopus]v1.1"
+$Scope = "[DrOctopus] v1.2"
 Write-Output "$Scope Start"
 
 Write-Output "$Scope  Connect to Azure"
@@ -43,7 +42,7 @@ Write-Output "$Scope    TeamsWebHookUrl $TeamsWebHookUrl"
 Write-Output "$Scope    Runbook:$Runbook"
 Write-Output "$Scope   ##################"
 Write-Output "$Scope   Start $Runbook"
-$job = Start-AzAutomationRunbook -Name $Runbook -ResourceGroupName $resourceGroupName  `
+$job=Start-AzAutomationRunbook -Name $Runbook -ResourceGroupName $resourceGroupName  `
                                 -AutomationAccountName $automationAccountName `
                                 -Parameters $parmsInternal 
 Write-Output "$Scope   End $Runbook"
@@ -52,7 +51,7 @@ Disconnect-AzAccount
 
 Write-Output "$Scope  Connect to $SiteUrl "
 Connect-PnPOnline -Url $SiteUrl -ManagedIdentity
-Write-Output "$Scope  Token=$(Get-PnPAccessToken)"
+#Write-Output "$Scope  Token=$(Get-PnPAccessToken)"
 
 Write-Output "$Scope   Update Item Runit=False"
 
