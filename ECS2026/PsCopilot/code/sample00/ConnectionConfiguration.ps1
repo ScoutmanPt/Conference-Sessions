@@ -7,9 +7,9 @@ $adaptiveCard += Get-Content -Path (Join-Path $PSScriptRoot "resultLayout.json")
 $externalConnection = @{
     userId     = "9da37739-ad63-42aa-b0c2-06f7b43e3e9e"
     connection = @{
-        id               = "rodpowershell"
-        name             = "ROD connector (PowerShell)"
-        description      = "Testing the ROD connector with PowerShell"
+        id               = "rodpwshmd"
+        name             = "PowerShell Markdown"
+        description      = "Testing the PowerShell Markdown connector with PowerShell"
         activitySettings = @{
             urlToItemResolvers = @(
                 @{
@@ -28,7 +28,7 @@ $externalConnection = @{
         searchSettings   = @{
             searchResultTemplates = @(
                 @{
-                    id       = "rodgpwsh"
+                    id       = "rodpwshmdr"
                     priority = 1
                     layout   = @{
                         additionalProperties = $adaptiveCard

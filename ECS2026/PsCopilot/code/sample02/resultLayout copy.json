@@ -1,0 +1,89 @@
+{
+  "type": "AdaptiveCard",
+  "version": "1.6",
+  "body": [
+    {
+      "type": "ColumnSet",
+      "columns": [
+        {
+          "type": "Column",
+          "width": "auto",
+          "items": [
+            {
+              "type": "Image",
+              "url": "https://res.cdn.office.net/midgard/versionless/defaultmrticon.png",
+              "horizontalAlignment": "center",
+              "size": "small",
+              "altText": "Country result"
+            }
+          ],
+          "horizontalAlignment": "center"
+        },
+        {
+          "type": "Column",
+          "width": "stretch",
+          "items": [
+            {
+              "type": "ColumnSet",
+              "columns": [
+                {
+                  "type": "Column",
+                  "width": "auto",
+                  "items": [
+                    {
+                      "type": "TextBlock",
+                      "text": "[${title}](${titleUrl})",
+                      "weight": "bolder",
+                      "size": "medium",
+                      "maxLines": 3,
+                      "color": "accent"
+                    }
+                  ],
+                  "spacing": "none"
+                }
+              ],
+              "spacing": "small"
+            },
+            {
+              "type": "TextBlock",
+              "text": "[${titleUrl}](${titleUrl})",
+              "spacing": "small",
+              "weight": "bolder",
+              "color": "dark",
+              "maxLines": 1
+            },
+            {
+              "type": "TextBlock",
+              "text": "Modified by ${modifiedBy}",
+              "spacing": "small",
+              "maxLines": 1
+            },
+            {
+              "type": "TextBlock",
+              "text": "REST Countries details",
+              "maxLines": 1,
+              "wrap": true,
+              "spacing": "small"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Region: ${region}; subregion: ${subregion}; capital: ${capital}.",
+              "maxLines": 2,
+              "wrap": true,
+              "spacing": "small"
+            },
+            {
+              "type": "TextBlock",
+              "text": "Languages: ${languages}. Currencies: ${currencies}. Borders: ${borders}.",
+              "maxLines": 2,
+              "wrap": true,
+              "spacing": "small"
+            }
+          ],
+          "spacing": "medium"
+        }
+      ]
+    }
+  ],
+  "$schema": "http://adaptivecards.io/schemas/adaptive-card.json"
+}
