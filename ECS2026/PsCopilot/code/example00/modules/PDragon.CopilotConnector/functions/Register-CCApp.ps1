@@ -1,8 +1,39 @@
 function Register-CCApp {
+<#
+.SYNOPSIS
+    Registers a new Entra app for a Microsoft Copilot connector.
+
+.DESCRIPTION
+    Creates an Entra ID (Azure AD) app registration with the required Microsoft Graph
+    application permissions (ExternalConnection.ReadWrite.OwnedBy and
+    ExternalItem.ReadWrite.OwnedBy), creates a service principal, assigns app roles,
+    generates a client secret, stores it in a SecretManagement vault, and writes
+    TenantId and ClientId to a config.ini file.
+
+    If an app with the same display name already exists, the user is prompted to
+    confirm deletion before recreating.
+
+.PARAMETER ConnectorDisplayName
+    The display name for the Entra app registration. Defaults to 'Copilot Connector'.
+
+.PARAMETER SecretName
+    The name used to store the PSCredential (AppId + secret) in the SecretManagement
+    vault. Defaults to 'secretnamepowershell'.
+
+.PARAMETER ConfigPath
+    Full path to the config.ini file where TenantId and ClientId will be written.
+    The parent directory must already exist.
+
+.OUTPUTS
+    [pscustomobject] with AppId, ObjectId, DisplayName, SecretName, and ConfigPath.
+
+.EXAMPLE
+    Register-CCApp -ConnectorDisplayName 'My Connector' -SecretName 'myconnpowershell' -ConfigPath 'C:\connectors\config.ini'
+#>
     [CmdletBinding()]
     param(
         [string] $ConnectorDisplayName = "Copilot Connector",
-        [string] $SecretName = "testconnpowershell",
+        [string] $SecretName = "secretnamepowershell",
         [string] $ConfigPath 
     )
 
@@ -63,6 +94,7 @@ function Register-CCApp {
             }
         }
 
+        # --- Create app registration ---
         Write-Host "  [3/7] Creating app registration '$ConnectorDisplayName'..." -ForegroundColor Cyan
         $requiredResourceAccess = @(
             @{
@@ -82,14 +114,17 @@ function Register-CCApp {
 
         $app = New-MgApplication -DisplayName $ConnectorDisplayName -RequiredResourceAccess $requiredResourceAccess
 
+        # --- Create service principal ---
         Write-Host "  [4/7] Creating service principal..." -ForegroundColor Cyan
         $graphServicePrincipal = Get-MgServicePrincipal -Filter "appId eq '$($msGraphAppId)'"
         $connectorServicePrincipal = New-MgServicePrincipal -AppId $app.AppId
 
+        # --- Assign app roles ---
         Write-Host "  [5/7] Assigning app roles..." -ForegroundColor Cyan
         New-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $connectorServicePrincipal.Id -PrincipalId $connectorServicePrincipal.Id -AppRoleId $permExternalConnectionReadWrite -ResourceId $graphServicePrincipal.Id | Out-Null
         New-MgServicePrincipalAppRoleAssignment -ServicePrincipalId $connectorServicePrincipal.Id -PrincipalId $connectorServicePrincipal.Id -AppRoleId $permExternalItemReadWrite -ResourceId $graphServicePrincipal.Id | Out-Null
 
+        # --- Store client secret ---
         Write-Host "  [6/7] Storing client secret in SecretManagement vault..." -ForegroundColor Cyan
         $passwordCredential = Add-MgApplicationPassword -ApplicationId $app.Id
         $secureSecret = ConvertTo-SecureString -String $passwordCredential.SecretText -AsPlainText -Force
@@ -99,6 +134,7 @@ function Register-CCApp {
         Set-Secret -Name $SecretName -Secret $credential
         Write-Host ""
 
+        # --- Write config.ini ---
         Write-Host "  [7/7] Writing config.ini..." -ForegroundColor Cyan
         $configLines = @(
             "TenantId=$((Get-MgContext).TenantId)"
