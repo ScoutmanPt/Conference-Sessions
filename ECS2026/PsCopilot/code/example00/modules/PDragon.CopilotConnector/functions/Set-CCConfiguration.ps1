@@ -15,6 +15,9 @@ function Set-CCConfiguration {
         [string] $UserId = [guid]::NewGuid().ToString()
     )
 
+    if (-not (Test-Path $ResultLayoutPath)) { throw "ResultLayoutPath not found at: $ResultLayoutPath" }
+
+    try {
     # Initialize to an empty hashtable to explicitly define the type as hashtable.
     # This is needed to avoid the breaking change introduced in PowerShell 7.3 - https://github.com/PowerShell/PowerShell/issues/18524.
     # https://github.com/microsoftgraph/msgraph-sdk-powershell/issues/2352
@@ -54,5 +57,10 @@ function Set-CCConfiguration {
         }
         
         schema     = $Schema
+    }
+    }
+    catch {
+        Write-Error "Set-CCConfiguration failed: $_"
+        throw
     }
 }

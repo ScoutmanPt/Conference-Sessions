@@ -1,9 +1,9 @@
 Import-Module (Join-Path $PSScriptRoot "modules/PDragon.CopilotConnector/PDragon.CopilotConnector.psd1") -Force
 
-$connectorDisplayName = "Test Conn"
+$connectorDisplayName = "Test Conn12"
 $connectorName = $connectorDisplayName.ToLower().Replace(" ", "")
 
-$secretName="$(connectorName)powershell"
+$secretName="$($connectorName)powershell"
 $config=(Join-Path $PSScriptRoot "config.ini") 
 
 Register-CCApp `

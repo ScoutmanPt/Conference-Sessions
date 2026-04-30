@@ -7,6 +7,11 @@ function New-CCConnection {
         [switch] $SkipCopilotVisibility
     )
 
+    if ([string]::IsNullOrWhiteSpace($ConfigPath))                     { throw "ConfigPath cannot be empty." }
+    if (-not (Test-Path $ConfigPath))                                    { throw "config.ini not found at: $ConfigPath" }
+    if (-not (Test-Path $ConnectionConfigurationPath))                   { throw "ConnectionConfigurationPath not found at: $ConnectionConfigurationPath" }
+
+    try {
     $config = Get-Content -Path $ConfigPath | ConvertFrom-StringData
     $credential = Get-Secret -Name $SecretName
 
@@ -85,4 +90,9 @@ function New-CCConnection {
     }
 
     Get-MgExternalConnection -ExternalConnectionId $connectionId
+    }
+    catch {
+        Write-Error "New-CCConnection failed: $_"
+        throw
+    }
 }
