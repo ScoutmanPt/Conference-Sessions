@@ -40,14 +40,4 @@ $configPath = Join-Path $PSScriptRoot "config.ini"
 $config | Out-File -FilePath $configPath -Encoding utf8
 
 
-<#
-CustomKeyIdentifier  :
-DisplayName          :
-EndDateTime          : 11/28/2025 4:04:48 AM
-Hint                 : LVK
-KeyId                : fd53e6a2-0e83-435d-a68b-976c7be35033
-SecretText           : REDACTED_SECRET
-StartDateTime        : 11/28/2023 4:04:48 AM
-AdditionalProperties : {[@odata.context,
-                       https://graph.microsoft.com/v1.0/$metadata#microsoft.graph.passwordCredential]}
-#>
+
