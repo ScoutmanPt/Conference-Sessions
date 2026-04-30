@@ -38,5 +38,4 @@ New-CCConnection `
     -ResultLayoutPath (Join-Path $PSScriptRoot "resultLayout.json") `
     -SecretName $secretName `
     -ConfigPath $config `
-    -IconPath (Join-Path $PSScriptRoot "pdcc-simple.png") `
     -Force

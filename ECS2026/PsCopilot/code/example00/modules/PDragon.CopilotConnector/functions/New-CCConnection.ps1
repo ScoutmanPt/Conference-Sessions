@@ -44,11 +44,6 @@ function New-CCConnection {
 .PARAMETER SkipCopilotVisibility
     Skips the step that enables the 'search' content experience on the connection.
 
-.PARAMETER IconPath
-    Optional path to an image file (.png, .svg, .jpg) to use as the connection icon
-    in the Microsoft Search admin center. Replaces the default coloured initials tile.
-    A square PNG (96x96 or 192x192 px) is recommended.
-
 .PARAMETER Force
     Deletes an existing connection with the same ConnectionId before creating a
     new one. Waits for the deletion to complete.
@@ -63,7 +58,7 @@ function New-CCConnection {
         -ConfigPath '.\config.ini'
 
 .EXAMPLE
-    New-CCConnection @params -IconPath '.\assets\icon.png' -Force
+    New-CCConnection @params -Force
 #>
     [CmdletBinding()]
     param(
@@ -75,7 +70,6 @@ function New-CCConnection {
         [Parameter(Mandatory)] [string] $ResultLayoutPath,
         [string] $SecretName = "secretnamepowershell",
         [string] $ConfigPath,
-        [string] $IconPath,
         [switch] $SkipCopilotVisibility,
         [switch] $Force
     )
@@ -83,13 +77,6 @@ function New-CCConnection {
     # --- Parameter validation ---
     if (-not (Test-Path $ResultLayoutPath))           { throw "ResultLayoutPath not found at: $ResultLayoutPath" }
     if (-not (Test-Path $ConfigPath))                { throw "config.ini not found at: $ConfigPath" }
-    if ($IconPath -and -not (Test-Path $IconPath))   { throw "IconPath not found at: $IconPath" }
-    if ($IconPath) {
-        $iconExtension = [System.IO.Path]::GetExtension($IconPath).ToLower()
-        if ($iconExtension -notin @('.png', '.svg', '.jpg', '.jpeg')) {
-            throw "Unsupported icon format '$iconExtension'. Use .png, .svg, or .jpg."
-        }
-    }
 
     try {
     Write-Host ""
@@ -102,9 +89,6 @@ function New-CCConnection {
     Write-Host "  SecretName            : '$SecretName'" -ForegroundColor White
     Write-Host "  ConfigPath            : '$ConfigPath'" -ForegroundColor White
     Write-Host "  ResultLayoutPath      : '$ResultLayoutPath'" -ForegroundColor White
-    if ($IconPath) {
-    Write-Host "  IconPath              : '$IconPath'" -ForegroundColor White
-    }
     Write-Host ""
 
     Write-Host "  [1/6] Reading config and credentials..." -ForegroundColor Cyan
@@ -148,7 +132,7 @@ function New-CCConnection {
 
     if ($existingConnection -and $Force) {
         if ($existingConnection.State -ne 'deleting') {
-            Write-Host "       Deleting existing connection '$connectionId'(-Force paramaeter is on)..." -ForegroundColor Cyan
+            Write-Host "       Deleting existing connection '$connectionId'(-Force parameter is on)..." -ForegroundColor Cyan
             Remove-MgExternalConnection -ExternalConnectionId $connectionId -ErrorAction Stop | Out-Null
         }
         else {
@@ -202,23 +186,6 @@ function New-CCConnection {
             -Uri "https://graph.microsoft.com/beta/external/connections/$connectionId" `
             -Body $visibilityBody `
             -ContentType "application/json" | Out-Null
-    }
-
-    # --- Upload icon (optional) ---
-    if ($IconPath) {
-        Write-Host "  [+]  Uploading connection icon..." -ForegroundColor Cyan
-        $iconContentType = switch ([System.IO.Path]::GetExtension($IconPath).ToLower()) {
-            '.png'  { 'image/png' }
-            '.svg'  { 'image/svg+xml' }
-            '.jpg'  { 'image/jpeg' }
-            '.jpeg' { 'image/jpeg' }
-        }
-        $iconBytes = [System.IO.File]::ReadAllBytes($IconPath)
-        Invoke-MgGraphRequest `
-            -Method PUT `
-            -Uri "https://graph.microsoft.com/v1.0/external/connections/$connectionId/connectorInfo/icon" `
-            -Body $iconBytes `
-            -ContentType $iconContentType | Out-Null
     }
 
     # --- Return created connection ---
