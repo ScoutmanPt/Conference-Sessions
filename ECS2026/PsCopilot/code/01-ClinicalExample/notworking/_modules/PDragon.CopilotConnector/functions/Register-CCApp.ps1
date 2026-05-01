@@ -67,7 +67,7 @@ function Register-CCApp {
         # $context = Get-MgContext
         # $hasRequiredScopes = $context -and @($graphScopes | Where-Object { $context.Scopes -notcontains $_ }).Count -eq 0
         # if (-not $hasRequiredScopes) {
-        Connect-MgGraph -Scopes $graphScopes -NoWelcome -UseDeviceCode -ContextScope Process
+        Connect-MgGraph -Scopes $graphScopes -NoWelcome -ContextScope Process
         # }
 
         $tenantId = (Get-MgContext).TenantId
