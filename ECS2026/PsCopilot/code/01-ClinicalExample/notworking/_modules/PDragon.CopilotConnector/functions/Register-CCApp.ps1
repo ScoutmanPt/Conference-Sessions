@@ -63,7 +63,7 @@ function Register-CCApp {
             Write-Host "  ConfigPath           : '$ConfigPath'" -ForegroundColor White
         }
         Write-Host ""
-        Write-Host "  [1/7] Connecting to Microsoft Graph..." -ForegroundColor Cyan
+        Write-Host "  [1/7] Connecting to Microsoft Graph ......" -ForegroundColor Cyan
         # $context = Get-MgContext
         # $hasRequiredScopes = $context -and @($graphScopes | Where-Object { $context.Scopes -notcontains $_ }).Count -eq 0
         # if (-not $hasRequiredScopes) {
