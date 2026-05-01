@@ -1,0 +1,80 @@
+NORTHGATE REGIONAL HOSPITAL
+CLINICAL PROTOCOL: HAEM-TRANS-001
+BLOOD TRANSFUSION ADMINISTRATION SOP
+Version: 2.4 | Effective: 15 February 2025 | Review: 15 February 2027
+Department: Haematology / All Clinical Areas | Author: Dr. A. Patel, Consultant Haematologist
+
+PURPOSE
+To ensure the safe administration of blood and blood products to patients at Northgate Regional Hospital, in accordance with NICE Guideline NG24 and SHOT (Serious Hazards of Transfusion) recommendations.
+
+IMPORTANT: Incorrect blood transfusion is a NEVER EVENT. The pre-transfusion checks described in this document are mandatory and must never be omitted.
+
+1. PRE-TRANSFUSION: SAMPLE COLLECTION
+- Label at the bedside, in the presence of the patient -- NEVER pre-label samples
+- Label must include: full name, DOB, NHS number, date/time, collector's signature
+- Group and Save (G&S) must be taken before any blood is ordered
+
+2. PRESCRIBING BLOOD
+- Blood must be prescribed on the drug chart using the Blood Transfusion section
+- Each unit prescribed separately with: blood component, dose, rate, indication
+- Only doctors and ANPs with Blood Transfusion competency may prescribe blood
+
+3. BEDSIDE IDENTIFICATION CHECKS (MANDATORY -- 2-PERSON CHECK)
+
+Both administering nurse AND a second checker must independently verify ALL of the following BEFORE connecting the blood:
+
+CHECK 1 -- Patient Identity:
+  Ask patient to state: Full name + Date of birth
+  Check wristband: Name, DOB, NHS number
+  Compare wristband against blood component label and compatibility label
+
+CHECK 2 -- Blood Component:
+  Blood group (ABO and RhD) matches patient
+  Unit number on component matches compatibility label
+  Expiry date and time -- do NOT use expired blood
+  Appearance: look for leaks, abnormal colour, clots, haemolysis
+
+CHECK 3 -- Documentation:
+  Prescription matches component to be given
+  Patient consent documented
+
+WARNING: If there is ANY discrepancy -- STOP. Do not administer the blood. Contact the Blood Bank immediately.
+
+4. ADMINISTRATION RATES
+  Red cells:        Over 90-120 minutes per unit (max 4 hours from removal from fridge)
+  Platelets:        Over 20-30 minutes
+  FFP:              Over 30 minutes
+  Cryoprecipitate:  Over 15-20 minutes
+
+Observations required:
+  - Baseline before transfusion starts
+  - 15 minutes into first unit
+  - Hourly during transfusion
+  - On completion of each unit
+
+5. TRANSFUSION REACTIONS
+
+Mild Reaction (urticaria, pruritus only):
+  - Slow transfusion rate
+  - Give chlorphenamine 10mg IV
+  - Continue with caution if symptoms resolve within 30 minutes
+
+Moderate/Severe Reaction (fever, rigors, hypotension, back pain):
+  - STOP transfusion immediately
+  - Keep IV access open with 0.9% NaCl
+  - Call medical team urgently
+  - Do NOT discard the blood unit -- return to Blood Bank with reaction form
+  - Complete a Datix incident report
+  - Contact Blood Bank: ext. 4200
+
+Anaphylaxis:
+  - STOP transfusion
+  - Call 2222 (Cardiac Arrest / Emergency)
+  - Follow Anaphylaxis Protocol (MED-EMERG-001)
+  - Give: Adrenaline 0.5mg IM, Chlorphenamine 10mg IV, Hydrocortisone 200mg IV
+
+DOCUMENT CONTROL
+v2.3 - 01 Sep 2023 - A. Patel - Updated observation timings
+v2.4 - 15 Feb 2025 - A. Patel - Anaphylaxis section aligned with MED-EMERG-001
+
+CONFIDENTIAL: Clinical Staff Only
