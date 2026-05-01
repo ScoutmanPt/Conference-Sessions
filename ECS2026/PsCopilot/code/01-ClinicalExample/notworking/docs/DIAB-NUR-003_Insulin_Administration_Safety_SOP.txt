@@ -1,0 +1,88 @@
+NORTHGATE REGIONAL HOSPITAL
+CLINICAL PROTOCOL: DIAB-NUR-003
+INSULIN ADMINISTRATION SAFETY SOP
+Version: 5.0 | Effective: 01 January 2025 | Review: 01 January 2027
+Department: Diabetes & Endocrinology / Nursing | Author: Ms. Claire Doyle, Diabetes Specialist Nurse
+
+PURPOSE
+Insulin is a HIGH-RISK medication. Administration errors can be immediately life-threatening.
+This SOP must be followed for ALL insulin administration across the Trust.
+
+INSULIN MUST NEVER be abbreviated as "U" for units on any prescription. Always write "units" in full.
+
+1. THE FIVE RIGHTS OF INSULIN ADMINISTRATION
+
+Two-Nurse Check: All insulin doses MUST be independently checked by two registered nurses before administration.
+
+Right Patient:  Confirm identity using open questions + wristband check (Name, DOB, NHS number)
+Right Drug:     Read the insulin name in full -- do NOT assume. Confirm type (rapid/short/intermediate/long-acting).
+Right Dose:     Check dose against BG reading and insulin prescription chart.
+Right Time:     Mealtime insulin given immediately before or immediately after food starts.
+Right Route:    All insulin is subcutaneous (SC) UNLESS specifically prescribed IV in a clinical emergency.
+
+2. SC INSULIN ADMINISTRATION -- STEP BY STEP
+
+1. Check Blood Glucose (BG) before every insulin dose
+2. Wash hands. Wear non-sterile gloves.
+3. Verify insulin type and confirm correct insulin pen/vial
+   - Cloudy insulin: Roll gently 10x, invert 10x to mix
+   - Clear insulin: No mixing required
+4. Attach new needle to pen device
+5. Prime pen: dial 2 units, expel into air until drop visible at needle tip
+6. Select dose as prescribed
+7. Clean skin with alcohol wipe -- allow to dry 30 seconds
+8. Pinch the skin at injection site (abdomen, lateral thigh, or upper arm)
+9. Insert needle at 90 degrees (45 degrees if very thin patient)
+10. Inject full dose -- hold for 10 seconds before withdrawing needle
+11. Do NOT recap needle -- dispose immediately into sharps bin
+12. Document dose, time, injection site, and BG reading in patient record
+
+3. HYPOGLYCAEMIA MANAGEMENT
+
+Definition: Blood glucose <4.0 mmol/L
+
+Mild/Moderate (Patient Conscious and Able to Swallow):
+  Step 1: Give 15-20g fast-acting carbohydrate:
+          - 150-200 mL Lucozade Sport, OR
+          - 3-4 glucose tablets, OR
+          - 200 mL pure fruit juice
+  Step 2: Wait 10-15 minutes, recheck BG
+  Step 3: If BG still <4.0: repeat step 1
+  Step 4: If BG >=4.0: give long-acting carbohydrate (e.g., plain biscuits, next meal)
+  Step 5: Recheck BG 30 minutes later
+  Step 6: Document and notify medical team
+
+Severe (Patient Unconscious or Unable to Swallow):
+  Step 1: Call for help immediately
+  Step 2: IV Access: Give Glucose 10% 200 mL IV over 15 minutes
+          OR if no IV access: Glucagon 1mg IM
+  Step 3: Recheck BG 10 minutes after treatment
+  Step 4: Once conscious and able to swallow: give long-acting carbohydrate
+  Step 5: Call 2222 if patient does not regain consciousness within 10 minutes
+  Step 6: Complete Datix incident report. Notify Diabetes team.
+
+4. COMMON INSULIN TYPES AT NORTHGATE RH
+
+Rapid-acting (mealtime) -- CLEAR:
+  Novorapid (Insulin Aspart): Onset 10-20 min, Peak 1-2h, Duration 3-5h
+  Humalog (Insulin Lispro):   Onset 10-20 min, Peak 1-2h, Duration 3-5h
+
+Long-acting (background/basal) -- CLEAR:
+  Lantus (Insulin Glargine):  Once daily, SAME TIME each day. Onset 1-4h. Duration 20-24h.
+  Levemir (Insulin Detemir):  Once or twice daily. Duration up to 24h.
+
+Mixed -- CLOUDY (must be mixed before use):
+  NovoMix 30: Twice daily with meals. Onset 10-20 min. Dual peak.
+
+WARNING: Long-acting insulins (Lantus, Levemir) are CLEAR but must NEVER be confused with rapid-acting clear insulins. ALWAYS read the label.
+
+5. STORAGE
+- Unopened insulin: Refrigerator 2-8 degrees Celsius (NOT in door of fridge)
+- In-use insulin pen: Room temperature, protected from direct sunlight -- discard after 28 days
+- Do NOT freeze insulin -- discard if frozen
+
+DOCUMENT CONTROL
+v4.0 - 01 Jan 2022 - C. Doyle - Full revision per JBDS guidance
+v5.0 - 01 Jan 2025 - C. Doyle - Hypoglycaemia treatment updated; glucose concentration changed to 10%
+
+CONFIDENTIAL: Clinical Staff Only

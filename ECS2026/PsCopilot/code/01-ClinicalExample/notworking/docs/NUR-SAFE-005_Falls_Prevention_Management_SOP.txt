@@ -1,0 +1,76 @@
+NORTHGATE REGIONAL HOSPITAL
+CLINICAL PROTOCOL: NUR-SAFE-005
+FALLS PREVENTION & MANAGEMENT SOP
+Version: 3.1 | Effective: 01 April 2025 | Review: 01 April 2027
+Department: Nursing / Patient Safety | Author: Sr. Angela Booth
+
+PURPOSE
+This SOP outlines the process for assessing, preventing, and managing patient falls across all inpatient wards at Northgate Regional Hospital.
+
+1. FALLS RISK ASSESSMENT
+
+All patients must be assessed using the Morse Falls Scale on:
+- Admission
+- Transfer to a new ward
+- Any change in clinical condition
+- Following a fall
+- Every 72 hours as a minimum
+
+Morse Falls Scale Risk Categories:
+  Score 0-24  : Low risk   -> Standard precautions
+  Score 25-44 : Moderate   -> Implement falls prevention protocol
+  Score 45+   : High risk  -> Full falls prevention bundle + bed alarm
+
+The score must be documented in the electronic patient record within 2 hours of admission.
+
+2. FALLS PREVENTION BUNDLE (MODERATE-HIGH RISK)
+
+Environment:
+- Bed in lowest position at all times when patient is in bed
+- Bed brakes applied
+- Call bell within reach -- check every handover
+- Clear path to bathroom
+- Non-slip footwear provided and worn
+- Adequate lighting, especially at night
+
+Nursing Interventions:
+- Hourly intentional rounding documented on the safety board
+- Bed/chair alarm activated (do NOT disable without written clinical justification)
+- Falls risk alert sticker on patient wristband and above bed
+- Safety brief at every shift handover -- highlight high-risk patients
+
+Medication Review:
+- Flag patients on 4+ medications to prescriber for medication review
+- High-risk medications: opioids, benzodiazepines, diuretics, antihypertensives, antipsychotics
+
+3. POST-FALL MANAGEMENT
+
+Immediate Actions (within 30 minutes):
+1. Do NOT move the patient until assessed by a nurse
+2. Call for medical assistance if injury suspected
+3. Check vital signs: pulse, BP, oxygen saturation, GCS
+4. Examine for signs of injury: head, neck, limbs, pelvis
+5. If head injury suspected: perform neurological observations every 30 minutes for 4 hours
+6. Comfort and reassure the patient
+
+Documentation (within 2 hours of fall):
+- Complete a Datix incident report (mandatory for ALL falls, including near-misses)
+- Document in patient notes: time, location, circumstances, witnesses, injuries, actions taken
+- Inform next-of-kin or nominated person
+- Inform Consultant or on-call doctor
+
+4. PATIENT & FAMILY EDUCATION
+- Educate patient and family about falls risk and prevention strategies
+- Advise patient to call for assistance before getting up
+- Provide written information leaflet NUR-PI-FALLS-001
+
+RELATED DOCUMENTS
+- Morse Falls Scale Scoring Guide (NUR-SAFE-005-A)
+- Post-Fall Neurological Observation Chart (NUR-OBS-003)
+- Datix Incident Reporting Guide (QUAL-001)
+
+DOCUMENT CONTROL
+v3.0 - 01 Jan 2024 - Sr. A. Booth - Major revision, Morse Scale added
+v3.1 - 01 Apr 2025 - Sr. A. Booth - Updated post-fall neurological obs timings
+
+CONFIDENTIAL: Clinical Staff Only
