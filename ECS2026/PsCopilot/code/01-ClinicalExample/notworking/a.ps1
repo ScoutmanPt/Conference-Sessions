@@ -1,0 +1,59 @@
+$session = New-Object Microsoft.PowerShell.Commands.WebRequestSession
+$session.UserAgent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/147.0.0.0 Safari/537.36 Edg/147.0.0.0"
+$session.Cookies.Add((New-Object System.Net.Cookie("MicrosoftApplicationsTelemetryDeviceId", "a2a1f286-b613-43f2-8cb5-b0e31ce112e7", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("MicrosoftApplicationsTelemetryFirstLaunchTime", "2026-01-06T21:25:04.995Z", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("MSFPC", "GUID=12cafdf9e7a748fa8ac666c5efbdb595&HASH=12ca&LV=202601&V=4&LU=1767734664359", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("s.SessID", "8a3c7fb0-c9ec-440a-853d-2a8b1c42c36b", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("s.CURedir", "True", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("s.MFG", "True", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("s.cachemap", "21", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("UserLoginPath", "adminportal%2Fhome", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("UserLoginRef", "%2F", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("s.AjaxSessionKey", "6RK4omp2W7LYWdVIjCvOloXY3JnR2A4Im75BAUlqBkvqzQmuPNF7Vy%2B2X3pYn%2FXPs5W%2BM%2FXr%2Blf34tVQtv%2BEpw%3D%3D", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("s.userid", "10033FFF84E46F09", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("p.TenantCulture", "cb12aa4a-b009-44fa-9071-64b162296d05::pt-PT", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("s.DisplayCulture", "en-US", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("x-portal-routekey", "frc-uas", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("p.FirstLoginDateTimeUtc", "id=1784039623&value=Mar_01_2013", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("UserIndex", "H4sIAAAAAAAAAxWMyw0CQQxDh%2BVXAC1wjXAymezOFkAFNJAB9sRt%2B5dILD3LB9tTKeUQXIMp86OkjsFNIEZoBHmxrtpWcNbu78Hirk4D6KS6OXXMTKaDTaTbB%2B2UL%2Bfk6b%2F9e8kdoCxbj7aGzWxGS10iVahXG2M0ztkfXgpL1ZQAAAA%3D", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("RootAuthToken", "AwAAABowNy8zMC8yMDI2IDE2OjA2OjU1ICswMDowML8NMS5BUWtBU3FvU3l3bXcta1NRY1dTeFlpbHRCU1hUaldIMkkyOUxnNEJOOTRBbTQ1c0FBS3dKQUEuQlFBQkF3RUFBQUFEQU96X0JRRDBfMFYyYjFOMGMwRnlkR2xtWVdOMGN3SUFBQUFBQU1ieXdMOUZsaVBOWno5S3RyTVhkNW5vVW5iWHRPbURtb3FHczNjWjl0OXVyZUlESjRWMEw2aGRlbFN5TTNqbzZibDlERHk5THZxbWdPbHE2VlZCTFlKcmlYWE5SbFB6dnVvb1BSdUo1d2VycmlJdTFMUFhZXzNJUGI5MnpZbE9IeTY1QUlIZldtYWNNNlhua21xV0hqNmRCT0lOUTVla0ZNM1A2dXBpd2JBZ0RmWEhqbTROeG1qcDRWQ0lsalBFWFVNNXRubWdUeHAwTnVNRzR5WXpsWlpUeGVUMWduNmtoVHQ3aGdFRUxwZ29JeldGaXhuWWNPeU9kenlkQkhzRTlvQ2ZDcU9obi1YVk5jMjBGbGw2UzBHNmc3RFJNT3VMVHlGOU42ZHM0bXdwUFpyQ3dsNG55Zm82djdENEpPRFZIV0tnVzJ3RS1hR2NuRHZ5dFBuOHNicnI3X1FZOFljZzdOODVoX1RQS0VKVHM4akI2aE93a3FJRUxkSFJ6SHZFWERJNDZBUmNsN1pMMmZTNmpOZVBlTXpjT1ZXSmJkMTk2NUxmX0lVbEhYTDhPUDhlSjk1NXJXNUhrQjlUM2x1RjhyRVRDRS1CMlBUY2phX1ZDS1RpMnRDdWtkUE82aGk3eDFyaVphQWVFLTQ5V054TGpBNlVRR2s5S2tva01MLWtlQV9zSl9Zb1JQQkxwblY3YzRTUThCcEg3VDF3MDc0bWZ0aEpRUl9CVWpFVEE5ZjBtTTdTSFlTcFZiZXo5am9ELUxkWTN3aVM3bFFfNW5EQ3VPR0U0ZEtGRmpDeEx1aXEwUy1wb3c1YjQzeG55bk9fQV9RRmdZejNhNXVJU1kyVURkNHc3Z0tTenZWREVQX2I3MUZhNmJJYTZqaUFFVzgzczRhMjd1dzBqTE5vNjA2aElyTzI1Sl9ycUVOX0xCRzZyeXJvOVNlOEM1VXQ2VDloem9XOS1La01HTnFRUENIRW1lczN3R0tBX19MUUJRRFBUR1htZUpfVm1LNEtBNDQ2UmhTX3hsVDBDR2RwUlZ0bmlkNlhGUGNwdGxuRVJLV093VDFBMl9tdTdwb1RJSnBsTE5ZNGJTR09Pdlhta3ZZcmM3d1BSSEVJWXo3cFpXS1RDWnYtLWtvWXBldG0ybkYtLWFwQ0pYdVlBaUtZRTNJRGsxY3dIaW1iNHlqMFVxV2czVUc3RjN0TXFiNUY1eEh2aGRZNFFubnR3VWpMeVdfMjVoVWlpbzZRelRILVhndk1iS3BfaXZfN3FmaEFIX0VTcGR1RkJyMnQxUEtBOXFnUmRjdExDQndOYjl2eXdEalVvN3RWc2xqUE85Y0xlZ2NyOXd5WnZOWGswTnNIZEItNExBQlZtbm80WmNLcDR3dExrbTgxX3MyTmxaN1JOaGYyc3RjMlBpQ2llcnJTQ3lFMzY1dlVFMFhxM2RWZXBMbVlOajVEVTY4elg3Ujg1UlRLX0VocHNRSU81eFhIQWVIXzFqZ1AxVWNHQ2tTZnZqQm56dVdJUzNUYl96enNhNGZXTVNZcVRsUHM0TzY0SUdGUk0yNFZjVGFQWmtJeDBvZnhNeXV3eU15ZHNSeWZtVnlzMjNWOE9wUDY1UkVxdlRNTHZscTdQS1Y4TkdkSUZIX2VkWFVMZ0oyYXgtem5TY2pwdVhSSVVOVzNZTGNfUlBJdTdnY0thTFQwUFo2QmRXa1RxZTZBaUFQV1Vkd3FhaGQtanZfdnU1dDRmay1SN0xndENJM0NqQnJvc3Z1SzltUWdXUkhyQ0VuS2FROGVDcnJCakduaUJkYURrRGRiMmU0M05ncFBIbEQ2Z05tMVpvOXozODRhSUxfTk4yczYtZW4xenZLMWdHampqb2FnaVJhX01CeHQzdmF6QV9uQU0wa01tVHFSeVVXOWxXeWFjdF9sLWJlRmdJOFJaMkNvZWtaLTg4N29BbUtEUGVzbU5zbl90dlN3bVM2WXJoaWFVaTk2ejdqa2lScEpEbk5vTFQxb1hBS0dQWTgzZ0ZOOXY3N3kzN3JuWFU3YnhtZ3Y4eThhY3NBUFNmeUFjdFNnRVZQTlZOWnpQdFVPMUI1NDBQNG00enl0ODN4eDRTZDdndmphZGY4NldIV2hlNEtlaGY5SkozalR1UXJod1JHOW0xblM5UXZpV2cA", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("OIDCAuthCookie", "0kjU39XwhUhwavVGp7kVCXdJqMRu7cc5kDivwNj012S66V8YL3D4PPjTiVENnimfFCw-pVDRA0TAuB4tGcl2Fqf-JJovZ8sWu0Azd1d8PSQznqMj8SHh0vgKeN2tzoNAALnLNPfn0VUF11EssVJ17kOw3pDw-fFIcCdghAZ0QOA1W3dRABoCDTHIMXPYC2ZKcQDEm7lBd1dwPm9ZZiebiw0TC4_SZshOKVprAWStRO0zHNduMQS2YJYxQvUMaa-qg-g4v2_AgjRLAyeUf7P_frt051HVsnLlu4ec1etRHQwRlwrYox_0WOBQXWHVsp_zS6Q-HOZEMD5hl-I2IqAHnegYK7k3mgyijaqHOx5BuS9vkXdfvcd1-qxQNkYs1AlAq9YwLJQO3u14PQCbScf-ptiu-XhWmyiimIZkUfBT9aShmzALyFKmDfGlF4GE2QcFAQbTotsNj4BbdLKg0qAlQdyt9NqLSbvP_TyAd_6mIMC4UL2nT1umx0ajtA58n3IiukFpejp8j3Zjx3VxqwMJgutsOwFJ98UJpEX7l1T3QIV4YC3D8L7ABE_w_8ahymK5MO1AJ28hNSGYO4Gu1otO94LKCe9tN7KSkuQZiZhoQd-cPJXQp9TLsCHFwhZ5QIdtIO9ayiRTBwVd8rMpVHsHWu2D046HD26TFbf8qwcCT4EtgIaeZMNq5SX6wGQ2tE0S8_AY-F7WPvZZUkshXAhfgog1EwL_8F0ynn2slpy6XSA8Y7o7CjTUebN6gTFfyfot25W56i_VrPnTul8PdsJkLCX8hyQFowwhsl65EK8DzQZLt4Ho_OFlszknASgTufNyC-vpvYwssraBtbjO_O2fREbNw5udD4rGQ9-A1XvwG76JfiaXkdWwvN-jceXMNtfM8YFqyGAhw-nf3IP0xQU3V9jzfz1sLy-R8BEKk3bNvHnPfh1H4dz3MOSQGvti3OZka3JtBfgMpIcqLP1NnudX9mxqcvgp50ZUAXE27BtK7i2T2sWxfUJjL5ngNw2Iroz9m7MD1X0dkdouGDn12A6t0i9k8COALHpK1xb3k9rb6J4AaBGGEciRsS2r-Kg6oQfib67Wq6is28eJwZc41pHQOjOhEDd0nfLW2AOEJPj0v-g0wPsxLR8IkRbp_z9DzboMcy1K3PEe_8DDFxhoJb9wMyvpyPCOEC6CRyh--hKV2lRMJ5-MCXcncU9YaugRyxvq4aSBsU1SPrqncw9vuMpeMivv3rxcjEJsGto49Zv5EI9Op4OFbR0NX3OVfquvqI0TDLCdHiZ8ncREDtF0SRJfILfMGdpEeakYd5E8PDIl1knwXVF-S2pGGISdaJg6WFsp3m4_I5U3EMTtAD6716QbIfrpH-TVuCoApB254P2xoiYrlZRP_vkhLgYhUvMeVYVmoPIvvfALPLQukCd7eQ-QmtCEU_w-Cp00w5iDxk-iEb1RYpcpOs6iojYbQRU7hcY4R80lctZnoEAZyesk9DVFI3tAoOjf4HBN6ML_SmYhhXs5h9_d2u2SOHuM0pYjFVqff4pnpdPeBtMqgNkAqndpfPdedbcA5HuEeHsPLwx4IfGeM141onhE4-Sm8a-pf98hhxlIFAhjkuJ5iPNbyCx6cfNgdmTU96qr3xUuGVliQN-R5DCjBWdeK5V9xZM7TQCfn7Hvg2VbN9zhHO_T6FUB1i7b5e1wkHHyJuDSn1tghF5sD4RZRHaMcyds0cq9lO1ecP9VFyCCtNvCjWQ8V6bSfNwxImI8fzOBxpNelCbG3GCRoYB1D6_3T0xDIb5lSnnZRdAoOqxd7qf9z7Om-6V_fOAFD4a9O4I4AkUmVRV6Qfbm-t4ceSagmMpSQIiQ_MdrrHwqRSO1gpL4nYlo87oXibGROCkg9-uKF7Sg6vBzSKP8UQNAWv2eKCsEf8VYlCYQjbmg7gOThhyBx3rriowwHNufLphHkMz-Z1QaEln28BUdFG-0gyn9Aypo5_azNC0gsFGY5lT7XZv1I3GnCvBDk_b63UX4qNeCOFsTjLDjaZjcspjmQo_XG5PM8Vf9MLqNBIcGfLgXkdLrvgPKmd2pRqutBSH-IQ1_kKkrKY8STobZDIlIsu8qgL9Dr9Reh5A85gs234YizR_VPRA2ZEojz3sevJpSrFWFs3BImUKkM_sf0CHoxvZFgXboAVHpbrkrn0WLfpRwM6omedHYRhUAq9Bwy-JIYZXSHZI0wUR45MqNd71RRLZdfLe8thF5LDFDopen2jaXYQAIc--FEbDwiXMhzxgUGAf_TWg-itw9jjGOI-1_W14WnIBbnMPR9lPtJ9vVQ1osjy9Y_1ESKic_9K9duu-5sFhOqVmW9OfGWb326o8VB-nJlrR0-QVLn1XZ0Z5Ef25b9kANHsITpQeHGwVPgjd5SqFFWyYskQJuBsgRd3bfjG54yQfy1x_O5AsJiRjPGYbWP8IlFEInccMGyXkk3AiAM1EhuGVgf1-idp_wVIqRiwZ2jn9NB_2k8WvwX6ZxxQTtB0PKLv4By_YOOMQaYPVV-ba-Pzv4HsP-oP8rPJ3-6_WVfk7huivRZ_rwJA2YIKn7AB2s4P6ax_rdxvM6Z4P2U9GAgvPoa_ATYpUGUND1zPAC5LwRcGjADpfI0hRE3Y0iq8f_SI5-xKVIrORLRSeM3OIBm5Ar6Xl2VSWy8iLIuVaH96bSrk47n_bKAkN5JcvJNzdQEIX405lG2vgPgvpRFNE-sJhWvHn3WtdSlMaQAf-BMHP13y-SxUunQDU1l3t2P0CiZgB-KEPGHxNhM6NzretqtD2SuWRixHlonl5Qh3PGvDR3VWnTUAAjje-OExhCLIsSzQCreIVahdemoF7JHGH-7XGoaaxoB85QxSYe51jPjomKW6g7U8dZUYdM7zJsictRR0ika7V_OzTBdPpMBlJ_rqlASnqOxdsVnJxj2Iz-5YSIcrMKDIyAolXNYziVVePuT5srHEE043k3XrxxfPOT9A9Dh8lNMLbWIQfMmXZQLgvm8a5Gw6UQQzmL3Z9o7r3xbUzPlXCkeGGWyi4TE2j4C9RSj8RT5DN52-KpB4gGNJti8e-xiVIhvjGEMOfi2v_ysGFbnf5O9g", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("s.UserTenantId", "HFxwfOCUXB761CFlngXacCbsr1IKD5svOsCjFuhANe48MWKR27Gq4ruw6IxhnyWckIyhuza8m2qfyNetqaS/Zb92iJMEPa6ewdHzLVhpV7hKVPSe+6zkC9AJ+al0g6kDGw/0VzPYlq34iPS9h8THRw==", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("s.DmnHQT", "05/02/2026 15:07:19", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("s.DmnRQT", "05/02/2026 15:07:19", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("s.DmnSOQT", "05/02/2026 15:07:21", "/", "admin.cloud.microsoft")))
+$session.Cookies.Add((New-Object System.Net.Cookie("p.LastLoginDateTimeUtc", "May_02_2026_15_07_19", "/", "admin.cloud.microsoft")))
+Invoke-WebRequest -UseBasicParsing -Uri "https://admin.cloud.microsoft/fd/ssms/api/v1.0/'MSS'/Collection('VT')/Settings(Path=':',LogicalId='ALL')" `
+-Method "PUT" `
+-WebSession $session `
+-Headers @{
+"authority"="admin.cloud.microsoft"
+  "method"="PUT"
+  "path"="/fd/ssms/api/v1.0/'MSS'/Collection('VT')/Settings(Path=':',LogicalId='ALL')"
+  "scheme"="https"
+  "accept"="application/json;odata=minimalmetadata, text/plain, */*"
+  "accept-encoding"="gzip, deflate, br, zstd"
+  "accept-language"="en-GB,en;q=0.9,en-US;q=0.8"
+  "ajaxsessionkey"="6RK4omp2W7LYWdVIjCvOloXY3JnR2A4Im75BAUlqBkvqzQmuPNF7Vy+2X3pYn/XPs5W+M/Xr+lf34tVQtv+Epw=="
+  "cache-control"="no-cache"
+  "dnt"="1"
+  "origin"="https://admin.cloud.microsoft"
+  "pragma"="no-cache"
+  "priority"="u=1, i"
+  "referer"="https://admin.cloud.microsoft/"
+  "sec-ch-ua"="`"Microsoft Edge`";v=`"147`", `"Not.A/Brand`";v=`"8`", `"Chromium`";v=`"147`""
+  "sec-ch-ua-mobile"="?0"
+  "sec-ch-ua-platform"="`"Windows`""
+  "sec-fetch-dest"="empty"
+  "sec-fetch-mode"="cors"
+  "sec-fetch-site"="same-origin"
+  "x-adminapp-request"="/copilot/connectors"
+  "x-anchormailbox"="APP:TenantSetting_AC9A8876-0461-47EA-9d4C-FE8D02AEF7D5@cb12aa4a-b009-44fa-9071-64b162296d05"
+  "x-edge-shopping-flag"="0"
+  "x-ms-mac-appid"="22154ac6-f365-494c-b512-010df21802e2"
+  "x-ms-mac-hostingapp"="M365AdminPortal"
+  "x-ms-mac-target-app"="MAC"
+  "x-ms-mac-version"="host-mac_2026.4.27.8"
+} `
+-ContentType "application/json" `
+-Body "{`"Payload`":`"{\`"Entities\`":[{\`"ContentSources\`":[{\`"Id\`":\`"All\`",\`"Name\`":\`"All\`"}],\`"EntityType\`":\`"File\`",\`"RefinerIds\`":[\`"687f914f-2850-419a-a88f-cbaddf6888ce\`",\`"c491531c-1797-4a85-94c4-1ac94566e487\`"]},{\`"EntityType\`":\`"External\`",\`"ContentSources\`":[{\`"Id\`":\`"rodpwshmd\`",\`"Name\`":\`"\`"},{\`"Id\`":\`"restcountries\`",\`"Name\`":\`"-\`"},{\`"Id\`":\`"anothertest4powershell\`",\`"Name\`":\`"\`"}]}],\`"QueryTemplate\`":\`"\`",\`"ExtendedQueryTemplate\`":\`"\`",\`"SearchTriggerPhrases\`":[],\`"DisplayName\`":\`"AllTenant\`",\`"Refiners\`":[{\`"Id\`":\`"687f914f-2850-419a-a88f-cbaddf6888ce\`",\`"DisplayName\`":\`"\`",\`"State\`":1,\`"Category\`":0,\`"Layout\`":{\`"MappedProperties\`":[],\`"FieldName\`":\`"FileType\`",\`"Type\`":0,\`"Values\`":[],\`"DisplayInterface\`":1,\`"ManualEntryEnabled\`":false,\`"ShowCount\`":false}},{\`"Id\`":\`"c491531c-1797-4a85-94c4-1ac94566e487\`",\`"DisplayName\`":\`"\`",\`"State\`":1,\`"Category\`":0,\`"Layout\`":{\`"MappedProperties\`":[],\`"FieldName\`":\`"LastModifiedTime\`",\`"Type\`":2,\`"Values\`":[],\`"DisplayInterface\`":0,\`"ManualEntryEnabled\`":true,\`"ShowCount\`":false}}],\`"VerticalType\`":0,\`"State\`":1,\`"IncludeConnectorResults\`":true,\`"Scope\`":0,\`"TemplateType\`":\`"All\`",\`"AllowedActions\`":208,\`"LastModifiedBy\`":\`"cb12aa4a-b009-44fa-9071-64b162296d05\`",\`"CRE\`":2}`"}"

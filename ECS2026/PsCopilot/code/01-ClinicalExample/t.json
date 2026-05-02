@@ -1,0 +1,41 @@
+{
+  "ActivitySettings": {
+    "UrlToItemResolvers": [
+      {
+        "Priority": 1
+      }
+    ]
+  },
+  "Configuration": {
+    "AuthorizedAppIds": [
+      "b3844236-fa1e-4fee-aa17-be90a3697aa3"
+    ]
+  },
+  "ConnectorId": null,
+  "Description": "Get information about whatever",
+  "Groups": null,
+  "Id": "anothertest4powershell",
+  "Items": null,
+  "Name": "AnotherTest4 (PowerShell)",
+  "Operations": null,
+  "Schema": {
+    "BaseType": null,
+    "Id": null,
+    "Properties": null
+  },
+  "SearchSettings": {
+    "SearchResultTemplates": [
+      {
+        "Id": "anothertest4powe",
+        "Layout": {},
+        "Priority": 1,
+        "Rules": []
+      }
+    ]
+  },
+  "State": "ready",
+  "AdditionalProperties": {
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#connections/$entity",
+    "contentCategory": "uncategorized"
+  }
+}

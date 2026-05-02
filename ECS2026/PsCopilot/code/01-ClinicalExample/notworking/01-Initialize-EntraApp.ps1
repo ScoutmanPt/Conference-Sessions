@@ -1,3 +1,4 @@
+$ErrorActionPreference = "Stop"
 # msg prefix
 $prefix="[CoPilot Connector]:"
 # Define the Microsoft Graph app role IDs required by the Copilot connector and other configurations.
