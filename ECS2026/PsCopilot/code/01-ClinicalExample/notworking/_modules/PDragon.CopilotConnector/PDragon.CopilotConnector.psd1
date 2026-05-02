@@ -11,6 +11,7 @@
         @{ ModuleName = 'Microsoft.Graph.Applications'; ModuleVersion = '2.0.0' }
         @{ ModuleName = 'Microsoft.Graph.Search'; ModuleVersion = '2.0.0' }
         @{ ModuleName = 'Microsoft.PowerShell.SecretManagement'; ModuleVersion = '1.0.0' }
+        @{ ModuleName = 'Microsoft.PowerShell.SecretStore'; ModuleVersion = '1.0.0' }
     )
 
     FunctionsToExport = @(

@@ -1,0 +1,346 @@
+NORTHGATE REGIONAL HOSPITAL
+CLINICAL PROTOCOL: DIAB-NUR-003
+INSULIN ADMINISTRATION SAFETY SOP
+Version: 5.0 | Effective: 01 January 2025 | Review: 01 January 2027
+Department: Diabetes & Endocrinology / Nursing | Author: Ms. Claire Doyle, Diabetes Specialist Nurse
+
+PURPOSE
+Insulin is a HIGH-RISK medication. Administration errors can be immediately life-threatening.
+This SOP must be followed for ALL insulin administration across the Trust.
+
+INSULIN MUST NEVER be abbreviated as "U" for units on any prescription. Always write "units" in full.
+
+1. THE FIVE RIGHTS OF INSULIN ADMINISTRATION
+
+Two-Nurse Check: All insulin doses MUST be independently checked by two registered nurses before administration.
+
+Right Patient:  Confirm identity using open questions + wristband check (Name, DOB, NHS number)
+Right Drug:     Read the insulin name in full -- do NOT assume. Confirm type (rapid/short/intermediate/long-acting).
+Right Dose:     Check dose against BG reading and insulin prescription chart.
+Right Time:     Mealtime insulin given immediately before or immediately after food starts.
+Right Route:    All insulin is subcutaneous (SC) UNLESS specifically prescribed IV in a clinical emergency.
+
+2. SC INSULIN ADMINISTRATION -- STEP BY STEP
+
+1. Check Blood Glucose (BG) before every insulin dose
+2. Wash hands. Wear non-sterile gloves.
+3. Verify insulin type and confirm correct insulin pen/vial
+   - Cloudy insulin: Roll gently 10x, invert 10x to mix
+   - Clear insulin: No mixing required
+4. Attach new needle to pen device
+5. Prime pen: dial 2 units, expel into air until drop visible at needle tip
+6. Select dose as prescribed
+7. Clean skin with alcohol wipe -- allow to dry 30 seconds
+8. Pinch the skin at injection site (abdomen, lateral thigh, or upper arm)
+9. Insert needle at 90 degrees (45 degrees if very thin patient)
+10. Inject full dose -- hold for 10 seconds before withdrawing needle
+11. Do NOT recap needle -- dispose immediately into sharps bin
+12. Document dose, time, injection site, and BG reading in patient record
+
+3. HYPOGLYCAEMIA MANAGEMENT
+
+Definition: Blood glucose <4.0 mmol/L
+
+Mild/Moderate (Patient Conscious and Able to Swallow):
+  Step 1: Give 15-20g fast-acting carbohydrate:
+          - 150-200 mL Lucozade Sport, OR
+          - 3-4 glucose tablets, OR
+          - 200 mL pure fruit juice
+  Step 2: Wait 10-15 minutes, recheck BG
+  Step 3: If BG still <4.0: repeat step 1
+  Step 4: If BG >=4.0: give long-acting carbohydrate (e.g., plain biscuits, next meal)
+  Step 5: Recheck BG 30 minutes later
+  Step 6: Document and notify medical team
+
+Severe (Patient Unconscious or Unable to Swallow):
+  Step 1: Call for help immediately
+  Step 2: IV Access: Give Glucose 10% 200 mL IV over 15 minutes
+          OR if no IV access: Glucagon 1mg IM
+  Step 3: Recheck BG 10 minutes after treatment
+  Step 4: Once conscious and able to swallow: give long-acting carbohydrate
+  Step 5: Call 2222 if patient does not regain consciousness within 10 minutes
+  Step 6: Complete Datix incident report. Notify Diabetes team.
+
+4. COMMON INSULIN TYPES AT NORTHGATE RH
+
+Rapid-acting (mealtime) -- CLEAR:
+  Novorapid (Insulin Aspart): Onset 10-20 min, Peak 1-2h, Duration 3-5h
+  Humalog (Insulin Lispro):   Onset 10-20 min, Peak 1-2h, Duration 3-5h
+
+Long-acting (background/basal) -- CLEAR:
+  Lantus (Insulin Glargine):  Once daily, SAME TIME each day. Onset 1-4h. Duration 20-24h.
+  Levemir (Insulin Detemir):  Once or twice daily. Duration up to 24h.
+
+Mixed -- CLOUDY (must be mixed before use):
+  NovoMix 30: Twice daily with meals. Onset 10-20 min. Dual peak.
+
+WARNING: Long-acting insulins (Lantus, Levemir) are CLEAR but must NEVER be confused with rapid-acting clear insulins. ALWAYS read the label.
+
+5. STORAGE
+- Unopened insulin: Refrigerator 2-8 degrees Celsius (NOT in door of fridge)
+- In-use insulin pen: Room temperature, protected from direct sunlight -- discard after 28 days
+- Do NOT freeze insulin -- discard if frozen
+
+DOCUMENT CONTROL
+v4.0 - 01 Jan 2022 - C. Doyle - Full revision per JBDS guidance
+v5.0 - 01 Jan 2025 - C. Doyle - Hypoglycaemia treatment updated; glucose concentration changed to 10%
+
+CONFIDENTIAL: Clinical Staff Only
+
+NORTHGATE REGIONAL HOSPITAL
+CLINICAL PROTOCOL: HAEM-TRANS-001
+BLOOD TRANSFUSION ADMINISTRATION SOP
+Version: 2.4 | Effective: 15 February 2025 | Review: 15 February 2027
+Department: Haematology / All Clinical Areas | Author: Dr. A. Patel, Consultant Haematologist
+
+PURPOSE
+To ensure the safe administration of blood and blood products to patients at Northgate Regional Hospital, in accordance with NICE Guideline NG24 and SHOT (Serious Hazards of Transfusion) recommendations.
+
+IMPORTANT: Incorrect blood transfusion is a NEVER EVENT. The pre-transfusion checks described in this document are mandatory and must never be omitted.
+
+1. PRE-TRANSFUSION: SAMPLE COLLECTION
+- Label at the bedside, in the presence of the patient -- NEVER pre-label samples
+- Label must include: full name, DOB, NHS number, date/time, collector's signature
+- Group and Save (G&S) must be taken before any blood is ordered
+
+2. PRESCRIBING BLOOD
+- Blood must be prescribed on the drug chart using the Blood Transfusion section
+- Each unit prescribed separately with: blood component, dose, rate, indication
+- Only doctors and ANPs with Blood Transfusion competency may prescribe blood
+
+3. BEDSIDE IDENTIFICATION CHECKS (MANDATORY -- 2-PERSON CHECK)
+
+Both administering nurse AND a second checker must independently verify ALL of the following BEFORE connecting the blood:
+
+CHECK 1 -- Patient Identity:
+  Ask patient to state: Full name + Date of birth
+  Check wristband: Name, DOB, NHS number
+  Compare wristband against blood component label and compatibility label
+
+CHECK 2 -- Blood Component:
+  Blood group (ABO and RhD) matches patient
+  Unit number on component matches compatibility label
+  Expiry date and time -- do NOT use expired blood
+  Appearance: look for leaks, abnormal colour, clots, haemolysis
+
+CHECK 3 -- Documentation:
+  Prescription matches component to be given
+  Patient consent documented
+
+WARNING: If there is ANY discrepancy -- STOP. Do not administer the blood. Contact the Blood Bank immediately.
+
+4. ADMINISTRATION RATES
+  Red cells:        Over 90-120 minutes per unit (max 4 hours from removal from fridge)
+  Platelets:        Over 20-30 minutes
+  FFP:              Over 30 minutes
+  Cryoprecipitate:  Over 15-20 minutes
+
+Observations required:
+  - Baseline before transfusion starts
+  - 15 minutes into first unit
+  - Hourly during transfusion
+  - On completion of each unit
+
+5. TRANSFUSION REACTIONS
+
+Mild Reaction (urticaria, pruritus only):
+  - Slow transfusion rate
+  - Give chlorphenamine 10mg IV
+  - Continue with caution if symptoms resolve within 30 minutes
+
+Moderate/Severe Reaction (fever, rigors, hypotension, back pain):
+  - STOP transfusion immediately
+  - Keep IV access open with 0.9% NaCl
+  - Call medical team urgently
+  - Do NOT discard the blood unit -- return to Blood Bank with reaction form
+  - Complete a Datix incident report
+  - Contact Blood Bank: ext. 4200
+
+Anaphylaxis:
+  - STOP transfusion
+  - Call 2222 (Cardiac Arrest / Emergency)
+  - Follow Anaphylaxis Protocol (MED-EMERG-001)
+  - Give: Adrenaline 0.5mg IM, Chlorphenamine 10mg IV, Hydrocortisone 200mg IV
+
+DOCUMENT CONTROL
+v2.3 - 01 Sep 2023 - A. Patel - Updated observation timings
+v2.4 - 15 Feb 2025 - A. Patel - Anaphylaxis section aligned with MED-EMERG-001
+
+CONFIDENTIAL: Clinical Staff Only
+
+NORTHGATE REGIONAL HOSPITAL Central Venous Catheter (CVC) Insertion Protocol ICU / HDU / Surgical Wards Protocol Code ICU-PROC-007 Department Intensive Care / Anaesthetics Author Dr. James O'Sullivan, ICU Consultant Version 2.3 Effective Date 01 November 2024 Review Due 01 November 2026 Applies To Doctors and Advanced Nurse Practitioners performing CVC insertion 1. Indications for CVC Insertion Haemodynamic monitoring (CVP) Administration of vasoactive drugs (vasopressors, inotropes) Parenteral nutrition (TPN) Lack of peripheral venous access Haemodialysis / renal replacement therapy (use specific HD catheters) WARNING: Central line insertion is a high-risk procedure. It must ONLY be performed by doctors with documented competency or under direct supervision of a competent practitioner. 2. Pre-Procedure Requirements 2.1 Consent Informed consent must be obtained and documented in the medical notes. In emergencies, document clinical justification. 2.2 Surgical Hand Scrub (Mandatory Before CVC Insertion) Wash hands and forearms for a minimum of 2 minutes using chlorhexidine gluconate 4% surgical scrub solution. Use a sterile brush for fingernails on the first scrub of the day. Rinse hands from fingertips to elbows, keeping hands above elbows at all times. Dry with a sterile towel, patting from fingertips to elbows. Apply sterile gown and gloves using aseptic technique. 3. Maximal Barrier Precautions The following are required for ALL CVC insertions without exception: Sterile gown Sterile gloves (double-gloving recommended) Surgical cap and mask with eye protection Large sterile drape covering the patient from head to toe Skin antisepsis with 2% Chlorhexidine in 70% alcohol — allow to dry minimum 30 seconds 4. Site Selection Priority Site Notes 1st Right Internal Jugular Preferred: predictable anatomy, lower pneumothorax risk 2nd Left Internal Jugular / Subclavian Use if right IJ not accessible 3rd Femoral Highest infection risk — use only if upper body access impossible; change within 72 hours Ultrasound guidance is MANDATORY for all elective internal jugular and subclavian insertions. 5. Post-Insertion Confirm position with chest X-ray before use (unless emergency). Document in patient notes: site, catheter type, number of lumens, date/time, name of operator. Apply sterile dressing. Date and initial the dressing. Change dressing every 7 days or immediately if wet/soiled/non-adherent. Daily review: Is the CVC still required? Remove as soon as no longer clinically necessary. WARNING: Every day a central line remains in place increases infection risk. The line should be reviewed daily on ward rounds and removed at the earliest opportunity. CVC days must be documented in the ICU quality dashboard.
+NORTHGATE REGIONAL HOSPITAL Hand Hygiene Standard Operating Procedure Clinical Areas — All Staff Protocol Code INFECT-001 Department Infection Prevention & Control Author Sr. Patricia Nwosu, Lead Infection Control Nurse Version 2.1 Effective Date 15 January 2025 Review Due 15 January 2027 Applies To All Northgate Regional Hospital staff, students, and contractors 1. The 5 Moments for Hand Hygiene (WHO) All clinical staff MUST perform hand hygiene at each of the following moments: Moment When Why 1 Before touching a patient Protect patient from harmful microorganisms carried on your hands 2 Before a clean/aseptic procedure Protect patient from harmful microorganisms, including their own 3 After body fluid exposure risk Protect yourself and the healthcare environment 4 After touching a patient Protect yourself and the healthcare environment 5 After touching patient surroundings Protect yourself and the healthcare environment 2. Method Selection Situation Method Routine patient care, between patients Alcohol-based Hand Rub (ABHR) — 20-30 seconds Visibly soiled hands, after toileting, before food Soap and water — 40-60 seconds C. difficile suspected or confirmed ward Soap and water ONLY — ABHR is INEFFECTIVE against C. diff spores Before sterile procedures (e.g., central line insertion) Surgical hand scrub with chlorhexidine gluconate — 2-5 minutes WARNING: ABHR is INEFFECTIVE against Clostridium difficile and Norovirus. On any ward with suspected or confirmed C. diff or Norovirus outbreak, soap and water MUST be used for ALL hand hygiene episodes. 3. Step-by-Step: Alcohol-Based Hand Rub (20-30 seconds) Apply one dose of ABHR to the palm of dry hands. Rub palms together. Right palm over left dorsum with interlaced fingers — repeat other side. Palm to palm with fingers interlaced. Backs of fingers to opposing palms with fingers interlocked. Rotational rubbing of left thumb clasped in right palm — repeat other side. Rotational rubbing backwards and forwards with clasped fingers of right hand in left palm — repeat other side. Allow to dry completely. Do NOT wipe on clothing. 4. Bare Below the Elbows (BBE) Policy All clinical staff working in patient-facing areas must comply with Bare Below the Elbows at all times: No wristwatches or bracelets No rings (plain wedding band excepted — must be moved during hand washing) Sleeves rolled up or short-sleeved Fingernails short, clean, and free from nail polish or artificial nails NOTE: Locum, bank, and agency staff are required to comply with BBE policy from their first shift. Ward managers are responsible for enforcement. 5. Audit & Compliance Hand hygiene compliance is audited monthly by the Infection Control team using the WHO Hand Hygiene Observation Tool. Results are published quarterly on ward notice boards and reported to the Infection Control Committee. Target compliance: 95% or above Wards below 80% will receive a targeted improvement programme Individual non-compliance must be addressed by the line manager using the Trust behaviour framework
+NORTHGATE REGIONAL HOSPITAL
+CLINICAL PROTOCOL: NUR-SAFE-005
+FALLS PREVENTION & MANAGEMENT SOP
+Version: 3.1 | Effective: 01 April 2025 | Review: 01 April 2027
+Department: Nursing / Patient Safety | Author: Sr. Angela Booth
+
+PURPOSE
+This SOP outlines the process for assessing, preventing, and managing patient falls across all inpatient wards at Northgate Regional Hospital.
+
+1. FALLS RISK ASSESSMENT
+
+All patients must be assessed using the Morse Falls Scale on:
+- Admission
+- Transfer to a new ward
+- Any change in clinical condition
+- Following a fall
+- Every 72 hours as a minimum
+
+Morse Falls Scale Risk Categories:
+  Score 0-24  : Low risk   -> Standard precautions
+  Score 25-44 : Moderate   -> Implement falls prevention protocol
+  Score 45+   : High risk  -> Full falls prevention bundle + bed alarm
+
+The score must be documented in the electronic patient record within 2 hours of admission.
+
+2. FALLS PREVENTION BUNDLE (MODERATE-HIGH RISK)
+
+Environment:
+- Bed in lowest position at all times when patient is in bed
+- Bed brakes applied
+- Call bell within reach -- check every handover
+- Clear path to bathroom
+- Non-slip footwear provided and worn
+- Adequate lighting, especially at night
+
+Nursing Interventions:
+- Hourly intentional rounding documented on the safety board
+- Bed/chair alarm activated (do NOT disable without written clinical justification)
+- Falls risk alert sticker on patient wristband and above bed
+- Safety brief at every shift handover -- highlight high-risk patients
+
+Medication Review:
+- Flag patients on 4+ medications to prescriber for medication review
+- High-risk medications: opioids, benzodiazepines, diuretics, antihypertensives, antipsychotics
+
+3. POST-FALL MANAGEMENT
+
+Immediate Actions (within 30 minutes):
+1. Do NOT move the patient until assessed by a nurse
+2. Call for medical assistance if injury suspected
+3. Check vital signs: pulse, BP, oxygen saturation, GCS
+4. Examine for signs of injury: head, neck, limbs, pelvis
+5. If head injury suspected: perform neurological observations every 30 minutes for 4 hours
+6. Comfort and reassure the patient
+
+Documentation (within 2 hours of fall):
+- Complete a Datix incident report (mandatory for ALL falls, including near-misses)
+- Document in patient notes: time, location, circumstances, witnesses, injuries, actions taken
+- Inform next-of-kin or nominated person
+- Inform Consultant or on-call doctor
+
+4. PATIENT & FAMILY EDUCATION
+- Educate patient and family about falls risk and prevention strategies
+- Advise patient to call for assistance before getting up
+- Provide written information leaflet NUR-PI-FALLS-001
+
+RELATED DOCUMENTS
+- Morse Falls Scale Scoring Guide (NUR-SAFE-005-A)
+- Post-Fall Neurological Observation Chart (NUR-OBS-003)
+- Datix Incident Reporting Guide (QUAL-001)
+
+DOCUMENT CONTROL
+v3.0 - 01 Jan 2024 - Sr. A. Booth - Major revision, Morse Scale added
+v3.1 - 01 Apr 2025 - Sr. A. Booth - Updated post-fall neurological obs timings
+
+CONFIDENTIAL: Clinical Staff Only
+
+NORTHGATE REGIONAL HOSPITAL Post-Operative Pain Management Protocol Orthopaedic Surgery — Hip & Knee Replacement Protocol Code PAIN-ORTHO-002 Department Orthopaedics / Anaesthetics / Acute Pain Service Author Dr. Susan Halliwell, Acute Pain Consultant; Mr. D. Keane, Orthopaedic Surgeon Version 1.5 Effective Date 01 June 2024 Review Due 01 June 2026 Applies To Nursing and medical staff on Orthopaedic wards (Wards 7, 8, and Surgical Day Unit) 1. Multimodal Analgesia Principles Effective post-operative pain control reduces length of stay, enables early mobilisation (critical for VTE prevention), improves patient satisfaction, and reduces opioid consumption. This protocol uses a multimodal approach combining analgesics with different mechanisms to maximise efficacy and minimise side effects. 2. Standard Analgesic Ladder Step 1: Regular Simple Analgesia (all patients unless contraindicated) Drug Dose Route Frequency Notes Paracetamol 1 g Oral/IV 4 times daily Max 4g/24h. IV if NBM or vomiting. Ibuprofen (if not contraindicated) 400 mg Oral 3 times daily with food Avoid if eGFR <60, peptic ulcer, asthma. Step 2: Neuropathic Adjuncts Pregabalin 75mg oral twice daily — reduce dose if eGFR <60. Causes sedation — fall risk assessment required. NOTE: Pregabalin and Gabapentin are controlled drugs (Schedule 3). Elderly patients (>75 years) and those with respiratory disease: use with caution — titrate from lowest dose. Step 3: Opioid Analgesia (for moderate-severe pain, NRS score 5 or above) Drug Dose Route Frequency Notes Oxycodone MR (background) 10 mg Oral Twice daily Start only with Acute Pain Service input. Oxycodone IR (breakthrough) 5 mg Oral Hourly PRN Max 4 doses/24h before Acute Pain review. Morphine IV (ICU/HDU only) 1-2 mg IV Hourly PRN Requires continuous monitoring. Naloxone must be available. WARNING: Opioids in the elderly: Start at half standard dose, titrate slowly, monitor closely for sedation and respiratory depression. Naloxone 400mcg IV/IM must be available on all orthopaedic wards. 3. Pain Assessment Use the Numeric Rating Scale (NRS 0-10) to assess pain at rest and on movement. Document in nursing notes: Every 4 hours routinely 30 minutes after every analgesic dose Before and after physiotherapy Before and after any patient-reported pain episode 4. When to Contact the Acute Pain Service NRS above 7 not responding to Step 3 analgesia More than 4 opioid breakthrough doses in 24 hours Any concern about opioid-related side effects (sedation, respiratory depression) Patient request for epidural or nerve block Complex chronic pain history or opioid-tolerant patient 5. Opioid Weaning on Discharge Patients should NOT be discharged on Oxycodone MR unless this was prescribed pre-operatively. Switch from MR opioids to PRN immediate-release opioids only if required. Supply maximum 7 days opioid at discharge (GP to continue if required). Provide patient education: opioid not for long-term use; do not drive. Document opioid prescribed in GP discharge letter.
+NORTHGATE REGIONAL HOSPITAL
+CLINICAL PROTOCOL: RESP-NUR-008
+OXYGEN THERAPY ADMINISTRATION SOP
+Version: 2.0 | Effective: 01 October 2024 | Review: 01 October 2026
+Department: Respiratory / Nursing | Author: Dr. Brian Lowe, Respiratory Consultant
+
+PURPOSE
+To ensure safe and effective administration of supplemental oxygen therapy to adult inpatients at Northgate Regional Hospital, in accordance with BTS Guideline on Emergency Oxygen Use in Adult Patients.
+
+KEY PRINCIPLE: Oxygen is a DRUG. It must be prescribed (except in emergencies). Oxygen should be titrated to achieve target saturation, not given at fixed high flow rates to all patients.
+
+1. OXYGEN PRESCRIBING
+
+Oxygen must be prescribed on the drug chart with:
+- Target oxygen saturation range
+- Delivery device
+- Flow rate range
+
+Standard target saturations:
+  Most patients:                         94-98% SpO2
+  COPD or at risk of hypercapnic failure: 88-92% SpO2
+
+WARNING: Giving high-flow oxygen to patients with COPD and chronic hypercapnia can suppress their hypoxic drive, worsen hypercapnia, and cause respiratory failure. Always check for COPD diagnosis and use 88-92% target range.
+
+In emergencies (cardiac arrest, major trauma, anaphylaxis, severe asthma, CO poisoning):
+Give high-flow oxygen via non-rebreathe mask 15L/min without waiting for prescription.
+
+2. DELIVERY DEVICES AND FLOW RATES
+
+Nasal Cannulae:
+  Flow: 1-4 L/min
+  Approximate FiO2: 24-36%
+  Use: Mild hypoxaemia; comfortable for long-term use; patient can eat and speak
+
+Simple Face Mask:
+  Flow: 5-10 L/min (NEVER below 5 L/min -- risk of CO2 rebreathing)
+  Approximate FiO2: 35-50%
+  Use: Moderate hypoxaemia
+
+Venturi Mask (Controlled Oxygen Therapy):
+  Available: 24%, 28%, 35%, 40%, 60%
+  Use: COPD patients requiring precise FiO2 control
+  MUST use correct colour-coded Venturi valve at correct flow rate (printed on valve)
+
+Non-Rebreathe Mask (NRM):
+  Flow: 15 L/min minimum
+  Approximate FiO2: up to 90%
+  Use: Emergency situations only -- not for routine use
+
+3. MONITORING
+
+Monitor SpO2 continuously in acutely unwell patients.
+For stable patients, document SpO2 and flow rate:
+- Every 4 hours on a clinical observation chart
+- 30 minutes after any change in oxygen therapy
+- If any change in clinical condition
+
+If SpO2 falls below target:
+  - Increase flow rate by 1-2 L/min (or move to higher-delivery device)
+  - Reassess within 5-10 minutes
+  - If no improvement: call medical team urgently
+  - If SpO2 below 90% unresponsive to oxygen: call 2222
+
+If SpO2 above target (hyperoxaemia):
+  - Reduce flow rate or wean to room air if clinically appropriate
+  - Document in patient record
+
+4. WEANING OXYGEN
+
+Wean oxygen gradually when patient is clinically stable and SpO2 consistently within target range on current therapy. Do not abruptly discontinue oxygen in acutely unwell patients.
+
+Step-down approach:
+NRM 15L -> Simple mask 10L -> Simple mask 5L -> Nasal cannulae 4L -> Nasal cannulae 2L -> Air
+
+5. HUMIDIFICATION
+
+Humidification is required when:
+- Flow rate >4 L/min via nasal cannulae for more than 12 hours
+- Patient has tracheostomy
+- Patient reports excessive nasal dryness or bleeding
+
+Use: Bubble humidifier or heated humidification circuit
+
+RELATED DOCUMENTS
+- BTS Emergency Oxygen Guideline (external -- available on Trust intranet)
+- Non-Invasive Ventilation Protocol (RESP-NIV-001)
+- Sepsis Six Protocol (MED-SEP-001)
+
+DOCUMENT CONTROL
+v1.0 - 01 Jan 2022 - B. Lowe - Initial issue
+v2.0 - 01 Oct 2024 - B. Lowe - Hyperoxaemia section added; weaning guidance updated
+
+CONFIDENTIAL: Clinical Staff Only
+
+NORTHGATE REGIONAL HOSPITAL Post-Operative Antibiotic Protocol Total Hip Arthroplasty (Hip Replacement Surgery) Protocol Code SURG-ORTHO-001 Title Post-Operative Antibiotic Protocol: Hip Replacement Surgery (Total Hip Arthroplasty) Department Orthopaedic Surgery / Surgical Ward Author Mr. David Keane, Consultant Orthopaedic Surgeon Reviewed By Dr. Helen Marsh, Clinical Pharmacist; Dr. L. Okafor, Infection Control Version 4.2 Effective Date 01 March 2025 Review Due 01 March 2027 Applies To All clinical staff involved in post-operative care of hip replacement patients WARNING: This protocol is for INPATIENT use only. For patients with documented penicillin allergy or MRSA risk, refer to the Allergy & Alternative Antibiotic Flowchart (SURG-ORTHO-001-ALT) before prescribing. 1. Purpose & Scope This protocol establishes the standard antibiotic prophylaxis and post-operative antibiotic management for adult patients undergoing elective or urgent Total Hip Arthroplasty (THA) at Northgate Regional Hospital. It applies from the immediate post-operative period through discharge. Adherence to this protocol is mandatory for all clinical staff. Any deviation must be documented in the patient's medical record with clinical justification and reviewed by the on-call Consultant. 2. Standard Prophylaxis Regimen (No Known Allergy) 2.1 Pre-Operative (Anaesthetic Room) Administered by the anaesthetist within 60 minutes before surgical incision: Antibiotic Dose Route Notes Co-amoxiclav 1.2 g IV Single dose; give over 3-4 min OR Cefuroxime (if co-amoxiclav unavailable) 1.5 g IV Single dose alternative NOTE: If surgery lasts >4 hours or blood loss exceeds 1.5 litres, a repeat intra-operative dose of Co-amoxiclav 1.2g IV must be administered. 2.2 Post-Operative (Ward — Standard Continuation) Post-operative prophylaxis continues for 24 hours only. Extended courses are NOT recommended and require Infection Control approval. Antibiotic Dose Route Frequency Duration Co-amoxiclav 625 mg Oral Three times daily 24 hours post-op (3 doses) 3. Penicillin-Allergic Patients Use the allergy severity classification before selecting an alternative: Allergy Severity Pre-Op Alternative Post-Op Alternative Mild (rash only, no systemic features) Cefuroxime 1.5g IV Cefalexin 500mg oral TDS x 24h Severe (anaphylaxis, angioedema, urticaria) Teicoplanin 400mg IV (single dose) Vancomycin 1g IV BD x 24h — notify pharmacy for monitoring WARNING: Patients with SEVERE penicillin allergy must have a RED allergy wristband applied in pre-assessment. Check allergy documentation before ANY antibiotic is given. In doubt, contact the on-call pharmacist. 4. MRSA-Positive or High-Risk Patients 4.1 Criteria for MRSA Risk Classification Confirmed MRSA colonisation on pre-operative screen Recent hospital admission within 90 days Resident in nursing/care home History of previous MRSA infection 4.2 MRSA Protocol Apply MRSA decolonisation protocol starting 5 days pre-operatively (see INFECT-002). Add Teicoplanin 400mg IV pre-operatively (single dose, 30 minutes before incision). Continue standard Co-amoxiclav prophylaxis post-operatively unless penicillin allergy. Notify Infection Control and document in patient record. 5. Monitoring & Adverse Effects 5.1 Required Monitoring Parameter Timing Action if Abnormal Renal function (U&E) Pre-op; Day 1 post-op if on Vancomycin Adjust Vancomycin dose; notify pharmacist Allergy observation 30 min after IV dose Stop antibiotic; call Resus team if anaphylaxis Wound site inspection Daily while inpatient Swab if signs of infection; escalate to Surgical Registrar 6. Signs of Surgical Site Infection (SSI) — Escalation Criteria Escalate IMMEDIATELY to the Surgical Registrar if ANY of the following are present: Wound erythema extending >2cm from incision edge Purulent discharge from wound Fever >38.5 degrees Celsius within 48 hours of surgery not explained by other cause Wound dehiscence Rising CRP or WBC with no other explanation NOTE: Do NOT start additional antibiotics without Surgical Registrar review. Wound swabs must be sent to Microbiology before any antibiotic change. 7. Discharge Advice Patients are not routinely discharged with oral antibiotics following uncomplicated THA. If oral antibiotics are prescribed at discharge: Clearly document indication, antibiotic, dose, duration, and prescriber name in the discharge summary Provide patient with written information leaflet (see Patient Information — SURG-ORTHO-001-PI) Notify GP via discharge summary — flag if extended antibiotic course 8. References & Related Documents NICE Guideline NG125: Surgical site infections — prevention and treatment (2019, updated 2023) British National Formulary (BNF) — current edition Northgate RH Antibiotic Formulary (PHARM-FORM-001) MRSA Decolonisation Protocol (INFECT-002) Allergy & Alternative Antibiotic Flowchart (SURG-ORTHO-001-ALT) 9. Document Control Version Date Author Changes 4.0 01 Jan 2023 D. Keane Updated to reflect 2023 NICE guidance 4.1 15 Jun 
+NORTHGATE REGIONAL HOSPITAL Venous Thromboembolism (VTE) Prevention Protocol Post-Operative Orthopaedic Patients Protocol Code SURG-ORTHO-003 Department Orthopaedic Surgery / Haematology Author Dr. Anika Patel, Consultant Haematologist Version 3.0 Effective Date 01 September 2024 Review Due 01 September 2026 Applies To All orthopaedic surgical wards — hip and knee replacement patients WARNING: VTE (DVT and pulmonary embolism) is a leading cause of preventable hospital death. All orthopaedic patients MUST have a VTE risk assessment completed within 6 hours of admission. 1. VTE Risk Assessment Use the Trust VTE Risk Assessment Tool (FORM-VTE-001) on admission and reassess if clinical condition changes. Document in EPMA and patient notes. 2. Mechanical Prophylaxis 2.1 Anti-Embolism Stockings (AES) Apply correctly sized thigh-length AES to BOTH legs before theatre Check fit and circulation every 8 hours Remove for hygiene, skin inspection, and physiotherapy — replace immediately after Do NOT apply if: peripheral arterial disease, peripheral neuropathy, skin fragility, allergy to stocking material 2.2 Intermittent Pneumatic Compression (IPC) Applied intra-operatively and continued post-operatively until patient is ambulatory Preferred over AES in high-VTE-risk patients or those with contraindications to AES Ensure device is functioning and patient compliance is documented each shift 3. Pharmacological Prophylaxis 3.1 Standard Regimen: Total Hip Replacement Drug Dose Route Frequency Duration Rivaroxaban (first-line) 10 mg Oral Once daily 35 days post-op Enoxaparin (if oral not tolerated) 40 mg SC Once daily 35 days post-op NOTE: Rivaroxaban first dose: minimum 6-10 hours after surgical closure. Do NOT give within 6 hours of surgery. 4. Contraindications & Dose Adjustments eGFR <15 mL/min: Avoid Rivaroxaban — use Enoxaparin with Haematology advice Active bleeding or high bleeding risk: Mechanical prophylaxis only until reassessment BMI >40 or weight >120 kg: Enoxaparin dose adjustment required — check with pharmacy HIT (Heparin-Induced Thrombocytopenia) history: Do NOT use any heparin — contact Haematology immediately 5. Early Mobilisation Early mobilisation is one of the most effective VTE prevention strategies. Physiotherapy should be commenced within 24 hours of surgery unless contraindicated. Document time of first mobilisation in nursing notes. 6. Discharge Planning Ensure adequate supply of anticoagulant dispensed at discharge (35 days for THR, 14 days for TKR) Patient education: purpose of medication, signs of DVT/PE, when to seek help GP letter must document anticoagulant prescribed, dose, and stop date Any patient on extended anticoagulation beyond 35 days requires Haematology input

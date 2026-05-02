@@ -109,7 +109,7 @@ function New-CCConnection {
     while (-not $mgReady) {
         try {
             $mgRetryCount++
-            Disconnect-MgGraph #-ErrorAction SilentlyContinue | Out-Null
+            Disconnect-MgGraph -ErrorAction SilentlyContinue | Out-Null
             Connect-MgGraph -ClientSecretCredential $credential -TenantId $TenantId -NoWelcome -ContextScope Process -ErrorAction Stop
             Get-MgExternalConnection -Top 1 -ErrorAction Stop | Out-Null
             $mgReady = $true

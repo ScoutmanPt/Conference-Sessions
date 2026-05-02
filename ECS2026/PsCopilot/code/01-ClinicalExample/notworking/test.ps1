@@ -2,7 +2,7 @@ $ErrorActionPreference='Stop'
 Import-Module (Join-Path $PSScriptRoot "./_modules/PDragon.CopilotConnector/PDragon.CopilotConnector.psd1") -Force
 
 # Reuse the same base name for the connector and stored secret.
-$connectorDisplayName = "Clinical Connector PowerShell 01"
+$connectorDisplayName = "Clinical Connector PowerShell"
 $connectorName = $connectorDisplayName.ToLower().Replace(" ", "")
 
 $secretName = "$($connectorName)powershell"
@@ -67,8 +67,6 @@ function Import-ExternalItems {
         [Parameter(Mandatory)]
         [Object[]] $Content,
         [Parameter(Mandatory)]
-        [Microsoft.Graph.PowerShell.Models.MicrosoftGraphExternalConnectorsExternalConnection] $ExternalConnection,
-        [Parameter(Mandatory)]
         [string] $ClinicalGroupId
     )
 
@@ -122,7 +120,8 @@ function Import-ExternalItems {
         }
 
         try {
-            Set-MgExternalConnectionItem -ExternalConnectionId $ExternalConnection.Id -ExternalItemId $item.id -BodyParameter $item -ErrorAction Stop | Out-Null
+            #Set-MgExternalConnectionItem -ExternalConnectionId $ExternalConnection.Id -ExternalItemId $item.id -BodyParameter $item -ErrorAction Stop | Out-Null
+            $item.content.value | Add-Content -Path "C:\work\code\github\Conference-Sessions\ECS2026\PsCopilot\code\01-ClinicalExample\notworking\test.txt"
             Write-Host "Imported $($file.Name)...($($itemId))" -ForegroundColor Green
         }
         catch {
@@ -135,45 +134,14 @@ function Import-ExternalItems {
 # Build the connector schema and create or update the external connection
 # before importing the local clinical protocol content.
 
-$connectorApp = Register-CCApp `
-    -ConnectorDisplayName $connectorDisplayName `
-    -SecretName $secretName
 
-if (-not $connectorApp) {
-    throw "Connector app registration was not created. Re-run and confirm replacement of the existing app, or choose a different connector display name."
-}
-    
-
-$schema = @(
-    New-CCProperty -Name "title" -Type "String" -Queryable -Searchable -Retrievable -Labels @("title")
-    New-CCProperty -Name "protocolCode" -Type "String" -Queryable -Retrievable -Refinable
-    New-CCProperty -Name "department" -Type "String" -Queryable -Retrievable -Refinable
-    New-CCProperty -Name "fileType" -Type "String" -Queryable -Retrievable -Refinable
-    New-CCProperty -Name "url" -Type "String" -Retrievable -Labels @("url")
-    New-CCProperty -Name "iconUrl" -Type "String" -Retrievable -Labels @("iconUrl")
-    New-CCProperty -Name "author" -Type "String" -Queryable -Searchable -Retrievable
-    New-CCProperty -Name "lastModifiedBy" -Type "String" -Queryable -Searchable -Retrievable -Labels @("lastModifiedBy")
-    New-CCProperty -Name "lastModifiedDateTime" -Type "DateTime" -Queryable -Retrievable -Refinable -Labels @("lastModifiedDateTime")
-)
-
-$externalConnection = New-CCConnection `
-    -ConnectionId $connectorName `
-    -ConnectionName $connectorDisplayName `
-    -ConnectionDescription "Example Copilot connector created with PowerShell" `
-    -ConnectionBaseUrls @("https://example.com") `
-    -Schema $schema `
-    -ResultLayoutPath (Join-Path $PSScriptRoot "resultLayout.json") `
-    -SecretName $secretName `
-    -TenantId $connectorApp.TenantId.ToString() `
-    -AppId $connectorApp.AppId.ToString() `
 
 
 
 
 # Retrieve the source data and ingest it into the connector.
 $content = Get-ClinicalProtocolFiles -Path $protocolRoot
-$externalConnection = Get-MgExternalConnection -ExternalConnectionId $connectorName -ErrorAction SilentlyContinue
+$externalConnection=""
+Import-ExternalItems -Content $content  -ClinicalGroupId $clinicalGroupId
 
-Import-ExternalItems -Content $content -ExternalConnection $externalConnection -ClinicalGroupId $clinicalGroupId
-##(Get-MgExternalConnectionItem -ExternalConnectionId clinicalconnectorpowershell01 -ExternalItemId protocol_DIAB_NUR_003_Insulin_Administration_Safety_SOP).Content.Value
 # Use only work content.

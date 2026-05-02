@@ -67,7 +67,7 @@ function Register-CCApp {
         # $context = Get-MgContext
         # $hasRequiredScopes = $context -and @($graphScopes | Where-Object { $context.Scopes -notcontains $_ }).Count -eq 0
         # if (-not $hasRequiredScopes) {
-        Connect-MgGraph -Scopes $graphScopes -NoWelcome -ContextScope Process
+        Connect-MgGraph -Scopes $graphScopes  -ContextScope Process
         # }
 
         $tenantId = (Get-MgContext).TenantId
@@ -143,9 +143,17 @@ function Register-CCApp {
         $secureSecret = ConvertTo-SecureString -String $passwordCredential.SecretText -AsPlainText -Force
         $credential = [pscredential]::new($app.AppId, $secureSecret)
 
+        $vaultName = "MyVault"
+        $existingVault = Get-SecretVault -Name $vaultName -ErrorAction SilentlyContinue
+        if (-not $existingVault) {
+            Write-Host "       No default vault found. Creating vault '$vaultName'..." -ForegroundColor Yellow
+            Register-SecretVault -Name $vaultName -ModuleName Microsoft.PowerShell.SecretStore -DefaultVault
+            Write-Host "       Vault '$vaultName' created and set as default." -ForegroundColor Green
+        }
+
         Write-Host ""
-        Set-Secret -Name $SecretName -Secret $credential
-        $storedCredential = Get-Secret -Name $SecretName -ErrorAction Stop
+        Set-Secret -Name $SecretName -Secret $credential -Vault $vaultName
+        $storedCredential = Get-Secret -Name $SecretName -Vault $vaultName -ErrorAction Stop
 
         if ($storedCredential -is [securestring]) {
             $storedCredential = [pscredential]::new($app.AppId, $storedCredential)
@@ -183,7 +191,7 @@ function Register-CCApp {
         while (-not $verified) {
             try {
                 $retryCount++
-                Disconnect-MgGraph #-ErrorAction SilentlyContinue | Out-Null
+                Disconnect-MgGraph -ErrorAction SilentlyContinue | Out-Null
                 Connect-MgGraph -ClientSecretCredential $credential -TenantId $tenantId -NoWelcome -ContextScope Process -ErrorAction Stop
                 $verified = $true
             }
