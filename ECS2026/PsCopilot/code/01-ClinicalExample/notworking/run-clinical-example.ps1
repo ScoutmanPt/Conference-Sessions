@@ -67,19 +67,27 @@ function Import-ExternalItems {
         [Parameter(Mandatory)]
         [Object[]] $Content,
         [Parameter(Mandatory)]
-        [Microsoft.Graph.PowerShell.Models.MicrosoftGraphExternalConnectorsExternalConnection] $ExternalConnection,
+        [object] $ExternalConnection,
         [Parameter(Mandatory)]
         [string] $ClinicalGroupId
     )
 
+    # $acl = @(
+    #     @{
+    #         type       = "group"
+    #         value      = $ClinicalGroupId
+    #         accessType = "grant"
+    #     }
+    # )
     $acl = @(
         @{
-            type       = "group"
-            value      = $ClinicalGroupId
-            accessType = "grant"
+          accessType = "grant"
+          type       = "everyone"
+          value      = "everyone"
         }
-    )
-    $ct=1    
+      )
+      
+     $startDate = Get-Date -Format "yyyy-MM-ddTHH:mm:ssZ"  
     $Content | ForEach-Object {
         $file = $_
         $rawText = if ($file.Extension -eq ".docx") {
@@ -119,6 +127,15 @@ function Import-ExternalItems {
                 type  = 'text'
             }
             acl        = $acl
+        # activities = @(@{
+        #   "@odata.type" = "#microsoft.graph.externalConnectors.externalActivity"
+        #   type          = "created"
+        #   startDateTime = $startDate
+        #   performedBy   = @{
+        #     type = "user"
+        #     id   = $externalConnection.userId
+        #   }
+        # })
         }
 
         try {
@@ -134,7 +151,7 @@ function Import-ExternalItems {
 
 # Build the connector schema and create or update the external connection
 # before importing the local clinical protocol content.
-
+<#
 $connectorApp = Register-CCApp `
     -ConnectorDisplayName $connectorDisplayName `
     -SecretName $secretName
@@ -168,7 +185,7 @@ $externalConnection = New-CCConnection `
     -AppId $connectorApp.AppId.ToString() `
 
 
-
+#>
 
 # Retrieve the source data and ingest it into the connector.
 $content = Get-ClinicalProtocolFiles -Path $protocolRoot
@@ -177,3 +194,4 @@ $externalConnection = Get-MgExternalConnection -ExternalConnectionId $connectorN
 Import-ExternalItems -Content $content -ExternalConnection $externalConnection -ClinicalGroupId $clinicalGroupId
 ##(Get-MgExternalConnectionItem -ExternalConnectionId clinicalconnectorpowershell01 -ExternalItemId protocol_DIAB_NUR_003_Insulin_Administration_Safety_SOP).Content.Value
 # Use only work content.
+## Use only work content.What anticoagulant should a hip replacement patient be on at discharge and for how long?
