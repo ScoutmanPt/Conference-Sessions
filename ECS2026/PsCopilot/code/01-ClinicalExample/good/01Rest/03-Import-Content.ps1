@@ -61,7 +61,7 @@ function Get-RESTCountries {
         }
       })
 
-    Write-Host "$($prefix)  Retrieving $($country.name.common)... $index of $($json.Count)" -ForegroundColor Yellow
+    Write-Host "$($prefix)  Retrieving $($country.name.common)... $index of $($json.Count)" -ForegroundColor Cyan
 
     # Create a normalized country object and add it to the import list.
     $restCountries += [pscustomobject]@{
@@ -165,7 +165,7 @@ function Import-ExternalItems {
     try {
       Set-MgExternalConnectionItem -ExternalConnectionId $externalConnection.connection.id -ExternalItemId $item.id -BodyParameter $item -ErrorAction Stop | Out-Null
       
-      Write-Host "$($prefix)  Imported $($item.properties.name)... $index of $($Content.Count)" -ForegroundColor Green  
+      Write-Host "$($prefix)  Imported $($item.properties.name)... $index of $($Content.Count)" -ForegroundColor Cyan  
     }
     catch {
       Write-Error "Failed to import $($item.properties.name)"
