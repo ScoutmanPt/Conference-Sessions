@@ -1,12 +1,11 @@
 $ErrorActionPreference = "Stop"
 # msg prefix
-$prefix="[CoPilot Connector]:"
+$prefix="[CoPilot Connector][01-CreateEntraApp]:"
 # Define the Microsoft Graph app role IDs required by the Copilot connector and other configurations.
 $permExternalConnectionReadWrite = "f431331c-49a6-499f-be1c-62af19c34a9d"
 $permExternalItemReadWrite = "8116ae0f-55c2-452d-9944-d18420f5b2c8"
 
 $msGraphAppId = "00000003-0000-0000-c000-000000000000"
-
 
 $connectorDisplayName ="AnotherTest4 (PowerShell)"
 $connectorDescription ="Get information about whatever"
@@ -74,6 +73,8 @@ $global:mainApp = @{
     SecretName = $secretName
    
 }
+##save mainapp as a json file for later retrieval
+$global:mainApp | ConvertTo-Json -Depth 10 | Out-File -FilePath (Join-Path $PSScriptRoot "config.json") -Encoding utf8
 
 # Look up Microsoft Graph's service principal so app role assignments can target it.
 Write-Host "$($prefix)  Finding the Microsoft Graph service principal..." -ForegroundColor Cyan

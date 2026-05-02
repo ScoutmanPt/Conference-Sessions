@@ -1,0 +1,8 @@
+{
+  "SecretName": "sanothertest4powershell",
+  "DisplayName": "AnotherTest4 (PowerShell)",
+  "ClientId": "7ea600bf-d2bd-48ad-b480-3dc3f5bb98a5",
+  "Id": "anothertest4powershell",
+  "TenantId": "cb12aa4a-b009-44fa-9071-64b162296d05",
+  "Description": "Get information about whatever"
+}

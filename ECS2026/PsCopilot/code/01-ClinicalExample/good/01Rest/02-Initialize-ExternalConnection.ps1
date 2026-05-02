@@ -1,14 +1,24 @@
 $ErrorActionPreference = "Stop"
 # msg prefix
-$prefix = "[CoPilot Connector]:"
+$prefix = "[CoPilot Connector][02-CreateConnection]:"
 
 Write-Host "$($prefix) Initialize External Connection [$($global:mainApp.DisplayName)]" -ForegroundColor Cyan
 
-# Load the schema property helper when this script is run directly.
-Write-Host "$($prefix)  Loading schema property helper..." -ForegroundColor Cyan
-if (-not (Get-Command New-CCProperty -ErrorAction SilentlyContinue)) {
-    . (Join-Path $PSScriptRoot "New-CCProperty.ps1")
+##read the main app configuration saved by 01-Initialize-EntraApp.ps1
+$configPath = Join-Path $PSScriptRoot "config.json"
+if (Test-Path -Path $configPath) {
+    Write-Host "$($prefix)  Reading main app configuration from $configPath..." -ForegroundColor Cyan
+    $mainAppConfig = Get-Content -Path $configPath -Raw | ConvertFrom-Json
+    $global:mainApp = @{
+        Id = $mainAppConfig.Id
+        DisplayName = $mainAppConfig.DisplayName
+        Description = $mainAppConfig.Description
+        TenantId = $mainAppConfig.TenantId
+        ClientId = $mainAppConfig.ClientId
+        SecretName = $mainAppConfig.SecretName
+    }
 }
+
 
 # Read connector settings saved by 01-Initialize-EntraApp.ps1.
 Write-Host "$($prefix)  Reading connector settings from `$global:mainApp..." -ForegroundColor Cyan
@@ -20,7 +30,7 @@ $secretName = $global:mainApp.SecretName
 
 # Microsoft Graph requires the search result template id to be 16 characters or less.
 Write-Host "$($prefix)  Preparing search result template id..." -ForegroundColor Cyan
-$searchTemplateId = $connectionId.Substring(0, [Math]::Min($connectionId.Length, 16))
+
 
 # Read the app-only credential created by 01-Initialize-EntraApp.ps1.
 Write-Host "$($prefix)  Reading app-only credential from SecretManagement secret '$secretName'..." -ForegroundColor Cyan
@@ -33,78 +43,20 @@ Connect-MgGraph -ClientSecretCredential $credential -TenantId $tenantId -NoWelco
 
 # Load the adaptive card layout used for search result rendering.
 Write-Host "$($prefix)  Loading adaptive card layout from resultLayout.json..." -ForegroundColor Cyan
-[hashtable]$adaptiveCard = @{}
-$adaptiveCard += Get-Content -Path (Join-Path $PSScriptRoot "resultLayout.json") -Raw | ConvertFrom-Json -AsHashtable
 
-# Build the external connection payload and schema definition.
-Write-Host "$($prefix)  Building external connection payload..." -ForegroundColor Cyan
-$externalConnection = @{
-    userId     = "e1251b10-1ba4-49e3-b35a-933e3f21772b"
-    connection = @{
-        id               = $connectionId
-        name             = $connectionName
-        description      = $connectionDescription
-        # Configure how source URLs map back to external item IDs.
-        activitySettings = @{
-            urlToItemResolvers = @(
-                @{
-                    "@odata.type" = "#microsoft.graph.externalConnectors.itemIdResolver"
-                    urlMatchInfo  = @{
-                        baseUrls   = @(
-                            "https://restcountries.eu/rest/v2/name/"
-                        )
-                        urlPattern = "/(?<slug>[^/]+)"
-                    }
-                    itemId        = "{slug}"
-                    priority      = 1
-                }
-            )
-        }
-        # Configure the adaptive card template shown in Microsoft Search results.
-        searchSettings   = @{
-            searchResultTemplates = @(
-                @{
-                    id       = $searchTemplateId
-                    priority = 1
-                    layout   = @{
-                        additionalProperties = $adaptiveCard
-                    }
-                }
-            )
-        }
-    }
-    
-    # https://learn.microsoft.com/graph/connecting-external-content-manage-schema
-    # Define the external item schema using New-CCProperty.
-    schema     = @(
-        New-CCProperty -Name "name" -Type "String" -Queryable -Searchable -Retrievable -Labels @("title")
-        New-CCProperty -Name "region" -Type "String" -Queryable -Searchable -Retrievable
-        New-CCProperty -Name "subregion" -Type "String" -Queryable -Searchable -Retrievable
-        New-CCProperty -Name "capital" -Type "String" -Queryable -Searchable -Retrievable
-        New-CCProperty -Name "population" -Type "Int64" -Retrievable
-        New-CCProperty -Name "latitude" -Type "Double" -Retrievable
-        New-CCProperty -Name "longitude" -Type "Double" -Retrievable
-        New-CCProperty -Name "areaInSqKm" -Type "Int64" -Retrievable
-        New-CCProperty -Name "timezone" -Type "String" -Retrievable
-        New-CCProperty -Name "mapUrl" -Type "String" -Retrievable -Labels @("url")
-        New-CCProperty -Name "flagUrl" -Type "String" -Retrievable
-        New-CCProperty -Name "borders" -Type "String" -Retrievable
-        New-CCProperty -Name "languages" -Type "String" -Retrievable
-        New-CCProperty -Name "currencies" -Type "String" -Retrievable
-        New-CCProperty -Name "lastModifiedBy" -Type "String" -Queryable -Searchable -Retrievable -Labels @("lastModifiedBy")
-        New-CCProperty -Name "lastModifiedDateTime" -Type "DateTime" -Queryable -Retrievable -Refinable -Labels @("lastModifiedDateTime")
-    )
-    
-}
+# Initialize to an empty variables to make sure the same are loaded in configuration script and connection initialization script
+$externalConnection=$null
+. $PSScriptRoot\Get-ConnConfiguration.ps1
+
 
 # Convert the connection payload to JSON and create the external connection.
 Write-Host "$($prefix)  Creating external connection '$connectionId'..." -foregroundColor Cyan
-$connectionBody = $externalConnection.connection | ConvertTo-Json -Depth 20 -Compress
-Invoke-MgGraphRequest -Method POST -Uri "https://graph.microsoft.com/v1.0/external/connections" -Body $connectionBody -ContentType "application/json" -ErrorAction Stop | Out-Null
+
+New-MgExternalConnection -BodyParameter $externalConnection.connection -ErrorAction Stop | Out-Null
 
 
 # Build the schema update body and attach it to the external connection.
-Write-Host "$($prefix)  Creating schema..." -NoNewLine -foregroundColor Cyan
+Write-Host "$($prefix)  Creating schema..." -foregroundColor Cyan
 $body = @{
     baseType = "microsoft.graph.externalItem"
     properties = $externalConnection.schema
@@ -113,7 +65,7 @@ Update-MgExternalConnectionSchema -ExternalConnectionId $externalConnection.conn
 Write-Host "$($prefix)  Waiting for the schema to get provisioned..." -ForegroundColor Yellow -NoNewline
 do {
     $connection = Get-MgExternalConnection -ExternalConnectionId $externalConnection.connection.id
-    Start-Sleep -Seconds 60
+    Start-Sleep -Seconds 30
     Write-Host "." -NoNewLine -ForegroundColor Yellow
 } while ($connection.State -eq 'draft')
 
@@ -123,7 +75,11 @@ do {
 ## Copilot Visibility is managed from the Microsoft 365 admin center:
 ## Copilot > Connectors > Your Connections > select the connection > Copilot Visibility.
 ## The Microsoft Graph connection API does not currently document a supported create/update path for that toggle.
-Write-Host "$($prefix)Connection created" -ForegroundColor Cyan
+
+Write-Host "`nCopilot Visibility is managed from the Microsoft 365 admin center:" -ForegroundColor Green
+Write-Host "Copilot > Connectors > Your Connections > select the connection > Copilot Visibility" -ForegroundColor Green
+Write-Host "The Microsoft Graph connection API does not currently document a supported create/update path for that toggle." -ForegroundColor Green
+Write-Host "`n$($prefix)Connection created" -ForegroundColor Cyan
 
 
 
